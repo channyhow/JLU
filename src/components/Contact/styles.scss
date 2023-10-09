@@ -1,0 +1,54 @@
+@use "./../../styles/vars";
+
+.contact {
+  padding: 3em 0 2em 0;
+
+  &__title {
+    position: sticky;
+    background:rgba(255, 255, 255, 0.1);
+    padding: 1em;
+    top: 0;
+    text-transform: uppercase;
+    font-weight: 500;
+    letter-spacing: 0.5em;
+    margin-bottom: 1em;
+
+  }
+
+}
+
+// /* Extra small devices (phones, 600px and down) */
+// @media only screen and (max-width: 600px) {
+//   .about {
+//   }
+// }
+
+// /* Small devices (portrait tablets and large phones, 600px and up) */
+// @media only screen and (min-width: 600px) {
+//   .about {
+//   }
+// }
+
+// /* Medium devices (landscape tablets, 768px and up) */
+// @media only screen and (min-width: 768px) {
+//   .about {
+//   }
+// }
+
+// // /* Large devices (laptops/desktops, 992px and up) */
+// @media only screen and (min-width: 992px) {
+//   .about {
+//   }
+// }
+
+// //For Big TV's (HD Screens)
+// @media screen and (min-width: 1280px) {
+//   .about {
+//   }
+// }
+
+// /* Extra large devices (large laptops and desktops, 1200px and up) */
+// @media only screen and (min-width: 1920px) {
+//   .about {
+//   }
+// }

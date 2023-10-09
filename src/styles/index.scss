@@ -1,0 +1,67 @@
+@use "reset";
+@use "vars";
+
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+h1 {
+  font-size: 3em; /* 40px/16=2.5em */
+  font-family: vars.$fheader;
+  font-weight: 600;
+}
+
+h2 {
+  font-size: 2em; /* 30px/16=1.875em */
+  font-family: vars.$ftitle;
+  line-height: 1.5em;
+  font-weight: 600;
+}
+
+h3 {
+  font-size: 1.5em; /* 30px/16=1.875em */
+  font-family: vars.$ftitle;
+}
+
+h4 {
+  font-size: 1.2em; /* 30px/16=1.875em */
+  font-family: vars.$fbody;
+  font-weight: 600;
+}
+
+p {
+  font-family: vars.$fbody;
+  line-height: 1.5em;
+  font-size: 1em;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul, ol {
+  list-style: none;
+}
+
+span {
+  font-weight: 600;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  // background: #edecdb;
+  color: white;
+}
+
+html {
+  height: 100%;
+}
+
+::-webkit-scrollbar {
+  display: none;
+}

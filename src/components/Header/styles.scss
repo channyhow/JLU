@@ -1,0 +1,71 @@
+@use "./../../styles/vars";
+
+  .header {
+padding: 2em 0 1em 0;
+    
+&__title{
+// text-transform: uppercase;
+margin: 0.5em 0 0.5em 0;
+text-transform: uppercase;
+letter-spacing: 10px;
+
+span {
+  opacity: 0.6;
+}
+}
+&__subtitle {
+  margin: 0em 0 1em 0;
+
+}
+&__body {
+  margin-top: 1em;
+  opacity: 0.6;
+}
+}
+
+// /* Extra small devices (phones, 600px and down) */
+// @media only screen and (max-width: 600px) {
+//   .header {
+
+//   }
+// }
+
+// /* Small devices (portrait tablets and large phones, 600px and up) */
+// @media only screen and (min-width: 600px) {
+//   .header {
+
+//   }
+// }
+
+// /* Medium devices (landscape tablets, 768px and up) */
+// @media only screen and (min-width: 768px) {
+//   .header {
+
+//   }
+// }
+
+// /* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+  .header {
+display: flex;
+flex-direction: column;
+align-items: flex-end;
+text-align: right;
+justify-content: space-evenly;
+margin-right: 2em;
+  }
+}
+
+//   //For Big TV's (HD Screens)
+//   @media screen and (min-width: 1280px) {
+//       .header {
+
+//       }
+//   }
+
+// /* Extra large devices (large laptops and desktops, 1200px and up) */
+// @media only screen and (min-width: 1920px) {
+//   .header {
+
+//   }
+// }

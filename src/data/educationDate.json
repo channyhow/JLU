@@ -1,0 +1,32 @@
+[
+  {
+    "id": "00",
+    "startYear": "2007",
+    "endYear": "2008",
+    "school": "ISCPA- Institut Supérieur des Médias",
+    "degree": "Bachelor professionnel: responsable de projet communication",
+    "location": "Paris, IDF, France",
+    "website": "",
+    "skills": []
+  },
+  {
+    "id": "01",
+    "startYear": "2005",
+    "endYear": "2007",
+    "school": "IESA arts & culture",
+    "degree": "Multimédia",
+    "location": "Paris, IDF, France",
+    "website": "",
+    "skills": []
+  },
+  {
+    "id": "02",
+    "startYear": "2003",
+    "endYear": "2004",
+    "school": "ISCOM",
+    "degree": "BTS Communication d'entreprises, Communication",
+    "location": "Paris, IDF, France",
+    "website": "",
+    "skills": []
+  }
+]

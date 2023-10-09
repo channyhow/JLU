@@ -1,0 +1,58 @@
+@use "./../../styles/vars";
+
+.contact-form {
+  padding: 3em 0 2em 0;
+  &__title {
+    position: sticky;
+    border-bottom: 2px solid #122b39;
+    padding: 3em 0 2em 0;
+    top: 0;
+    text-transform: uppercase;
+    font-weight: 500;
+    letter-spacing: 0.5em;
+  }
+
+  &__body {
+    margin-top: 1em;
+  }
+
+  form {
+    margin-top: 1em;
+  }
+}
+
+// /* Extra small devices (phones, 600px and down) */
+// @media only screen and (max-width: 600px) {
+//   .contact-form {
+//   }
+// }
+
+// /* Small devices (portrait tablets and large phones, 600px and up) */
+// @media only screen and (min-width: 600px) {
+//   .contact-form {
+//   }
+// }
+
+// /* Medium devices (landscape tablets, 768px and up) */
+// @media only screen and (min-width: 768px) {
+//   .contact-form {
+//   }
+// }
+
+// // /* Large devices (laptops/desktops, 992px and up) */
+// @media only screen and (min-width: 992px) {
+//   .contact-form {
+//   }
+// }
+
+// //For Big TV's (HD Screens)
+// @media screen and (min-width: 1280px) {
+//   .contact-form {
+//   }
+// }
+
+// /* Extra large devices (large laptops and desktops, 1200px and up) */
+// @media only screen and (min-width: 1920px) {
+//   .contact-form {
+//   }
+// }
