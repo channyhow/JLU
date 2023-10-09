@@ -6,7 +6,7 @@ interface IEducation {
   degree: string;
   location: string;
   website?: string;
-  skills?: string[];
+  skills: string[];
 }
 
 export interface IExperience {
