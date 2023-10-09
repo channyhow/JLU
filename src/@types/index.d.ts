@@ -5,8 +5,8 @@ interface IEducation {
   school: string;
   degree: string;
   location: string;
-  website: string;
-  skills: string[];
+  website?: string;
+  skills?: string[];
 }
 
 export interface IExperience {
@@ -16,7 +16,7 @@ export interface IExperience {
   company: string;
   position: string;
   location: string;
-  description : string;
-  website: string;
+  description?: string;
+  website?: string;
   skills: string[];
 }
