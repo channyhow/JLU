@@ -6,10 +6,10 @@ import logoRose from '../../assets/JL LOGO_150 ROSE.svg';
 import logoRoseHover from '../../assets/JL LOGO_150 ROSE JAUNE.svg';
 import { useMediaQuery } from '@mui/material';
 
-function Logo({ scale, color }: { scale?: string, color?: string }) {
+function Logo({ scale }: { scale?: string }) {
   // Check if the screen width is mobile
   const isMobile = useMediaQuery("(max-width: 767px)");
-  const [currentLogo, setCurrentLogo] = useState(logo);
+  const [currentLogo, setCurrentLogo] = useState(isMobile ? logoRose : logo);
 
   const handleMouseEnter = () => setCurrentLogo(isMobile ? logoRoseHover : logoHover);
   const handleMouseLeave = () => setCurrentLogo(isMobile ? logoRose : logo);

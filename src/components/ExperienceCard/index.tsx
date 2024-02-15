@@ -51,7 +51,7 @@ function ExperienceCard({ experiences }: ExperienceCardProps) {
 
   return (
     <div className="experience-card" style={{ display: 'flex' }}>
-      <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'flex-start' }}>
+      <div style={{ display: 'flex', flexDirection: 'column' }} className='experience-card__details'>
         {/* Map over experiences array to render company cards */}
         {experiences.slice(displayStartIndex, displayStartIndex + 5).map((exp, index) => (
           <div

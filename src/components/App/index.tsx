@@ -37,7 +37,7 @@ function App() {
           </div>
           <div style={{flex:"1"}}>
             {" "}
-            <Logo scale={"0.4"} color= {"#E5D9D5"}/>
+            <Logo scale={"0.35"} />
           </div>
         </div>
       )}
