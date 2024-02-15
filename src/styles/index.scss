@@ -9,40 +9,36 @@
 }
 
 h1 {
-  font-size: 3em; /* 40px/16=2.5em */
-  font-family: vars.$fheader;
+  font-size: 2.5em; /* 40px/16=2.5em */
+  font-family: 'Antonio';
   font-weight: 600;
 }
 
 h2 {
-  font-size: 2em; /* 30px/16=1.875em */
-  font-family: vars.$ftitle;
+  font-size: 1.875em; /* 30px/16=1.875em */
   line-height: 1.5em;
-  font-weight: 600;
+  // font-weight: 600;
 }
 
 h3 {
   font-size: 1.5em; /* 30px/16=1.875em */
-  font-family: vars.$ftitle;
 }
 
 h4 {
   font-size: 1.2em; /* 30px/16=1.875em */
-  font-family: vars.$fbody;
-  font-weight: 600;
+  font-family: 'EB Garamond';
 }
 
 p {
-  font-family: vars.$fbody;
   line-height: 1.5em;
-  font-size: 1em;
+  font-size: 0.9em;
 }
 
 a {
   text-decoration: none;
 }
 
-ul, ol {
+ul, ol, li {
   list-style: none;
 }
 
@@ -53,15 +49,47 @@ span {
 body {
   margin: 0;
   padding: 0;
-  height: 100vh;
-  // background: #edecdb;
-  color: white;
+  // height: 100vh;
+font-family: 'Inter'; 
+background-color: #FAF7F6; // Apply background color to the body
+}
+
+#root {
+  height: 100vh; // Ensure the root container covers the entire viewport height
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 html {
-  height: 100%;
+  // height: 100%;
+  -webkit-text-size-adjust: 100%;
+  line-height: 1.15;
 }
 
 ::-webkit-scrollbar {
   display: none;
+}
+
+:hover {
+transition: 0.2s;
+}
+
+button {
+  background-color: transparent; // Set the background color to transparent
+  border: none; // Remove border to make it look like a text link
+  padding: 0; // Remove any padding
+  margin: 0; // Remove any margin
+  cursor:pointer; // Add cursor pointer to indicate interactivity
+
+  &:focus {
+    outline: none; // Remove default focus outline
+  }
+  &:hover h1 {
+    color: #bf2a2a; // Change color on hover
+  }
+
+  &:active h1 {
+    color: #f91616; // Change color on click
+  }
 }

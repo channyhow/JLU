@@ -3,8 +3,7 @@ import './styles.scss';
 
 function Copyright() {
   return (
-    <section className="copyright">
-      {/* <h4 className="copyright__title">Copyright</h4> */}
+    <div className="copyright">
       <p className="copyright__body">
         Coded with ♡ in
         {' '}
@@ -25,7 +24,7 @@ function Copyright() {
         <span>Netlify</span>
         .
       </p>
-    </section>
+    </div>
   );
 }
 

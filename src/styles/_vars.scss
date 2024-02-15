@@ -13,28 +13,25 @@ $success: #55ff55;
 $danger: #ff5555;
 
 //fonts
-$fbody: 'Inter', sans-serif;
-$fheader: 'Inter', sans-serif;
-$ftitle:'Inter', sans-serif;
-$fnav: 'Inter', sans-serif;
 
 
-/* Extra small devices (phones, 600px and down) */
-@media only screen and (max-width: 600px) {
-}
-/* Small devices (portrait tablets and large phones, 600px and up) */
-@media only screen and (min-width: 600px) {
-}
-/* Medium devices (landscape tablets, 768px and up) */
-@media only screen and (min-width: 768px) {
-  //sizes
-  $font-body: 1em;
-  $font-subtitle: 1.5em;
-  $font-header: 2em;
-}
-/* Large devices (laptops/desktops, 992px and up) */
-@media only screen and (min-width: 992px) {
-  $font-body: 2em;
-  $font-subtitle: 2em;
-  $font-header: 3em;
-}
+
+// /* Extra small devices (phones, 600px and down) */
+// @media only screen and (max-width: 600px) {
+// }
+// /* Small devices (portrait tablets and large phones, 600px and up) */
+// @media only screen and (min-width: 600px) {
+// }
+// /* Medium devices (landscape tablets, 768px and up) */
+// @media only screen and (min-width: 768px) {
+//   //sizes
+//   $font-body: 1em;
+//   $font-subtitle: 1.5em;
+//   $font-header: 2em;
+// }
+// /* Large devices (laptops/desktops, 992px and up) */
+// @media only screen and (min-width: 992px) {
+//   $font-body: 2em;
+//   $font-subtitle: 2em;
+//   $font-header: 3em;
+// }

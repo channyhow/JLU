@@ -1,0 +1,11 @@
+@use "./../../styles/vars";
+
+.mobile-header {
+  display: flex;
+  align-items: center; /* Align items vertically */
+  padding: 1em 0.5em;
+  margin-bottom: 1em;
+  &__logo {
+    margin: auto; /* Move the logo to the right */
+  }
+}

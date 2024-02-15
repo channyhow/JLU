@@ -1,18 +1,30 @@
-import React from 'react';
-import './styles.scss';
+import "./styles.scss";
+import { useLocation } from "react-router-dom";
+import Logo from "../Logo";
+import Socials from "../Socials";
+import Navigation from "../Navigation";
 
 function Header() {
+  const location = useLocation();
+
+  
+
+  // Don't show the header on the landing page
+  if (location.pathname === "/") {
+    return null;
+  }
+
   return (
     <header className="header">
-      <h1 className="header__title">
-        <span>JL</span>
-        Albany
-      </h1>
-      <h4 className="header__subtitle">14 ans d&apos;expérience dans le tracking de la publicité digitale.</h4>
-      <p className="header__body">
-        Lancement de campagne, gestion de tags, intégration de solutions de tracking tierces,
-        mise en place de TMS et Analytics et de solutions pour publisher.
-      </p>
+      <div className="header__container" >
+        <div className="header__logo"
+                style={{paddingBottom:'1.5em'}}
+>
+          <Logo />
+        </div>
+        <Socials />
+        <Navigation />
+      </div>
     </header>
   );
 }

@@ -2,54 +2,14 @@
 
 .socials {
   display: flex;
-
-  &__icon {
-    padding: 0em 0.5em;
-    color: white;
-    // opacity: 0.6;
-  }
+  justify-content: flex-end;
 }
 
-// /* Extra small devices (phones, 600px and down) */
-// @media only screen and (max-width: 600px) {
+//   // /* Large devices (laptops/desktops, 992px and up) */
+//   @media only screen and (min-width: 992px) {
 //     .socials {
-
+// justify-content: flex-end;
+// margin-right: 1em;
+// flex: 1;
 //     }
-//   }
-
-//   /* Small devices (portrait tablets and large phones, 600px and up) */
-//   @media only screen and (min-width: 600px) {
-//     .socials {
-
-//     }
-//   }
-
-// //   /* Medium devices (landscape tablets, 768px and up) */
-//   @media only screen and (min-width: 768px) {
-//     .socials {
-
-//   }
-// }
-
-  // /* Large devices (laptops/desktops, 992px and up) */
-  @media only screen and (min-width: 992px) {
-    .socials {
-justify-content: flex-end;
-margin-right: 1em;
-flex: 1;
-    }
-  }
-
-//     //For Big TV's (HD Screens)
-//     @media screen and (min-width: 1280px) {
-//         .socials {
-
-//         }
-//     }
-
-//   /* Extra large devices (large laptops and desktops, 1200px and up) */
-//   @media only screen and (min-width: 1920px) {
-//     .socials {
-
-//   }
 // }

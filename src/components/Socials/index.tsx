@@ -19,32 +19,32 @@ function Socials() {
 
   const socialIcons = [
     { icon: <AlternateEmailIcon />, href: 'mailto:contact@albany.fr', target: '_email' },
-    { icon: <InstagramIcon />, href: 'https://www.instagram.com/', target: '_insta' },
-    { icon: <GitHubIcon />, href: 'https://github.com/', target: '_github' },
-    { icon: <LinkedInIcon />, href: 'https://www.linkedin.com/', target: '_linkedin' },
+    { icon: <InstagramIcon />, href: 'https://www.instagram.com/jlalbany', target: '_insta' },
+    // { icon: <GitHubIcon />, href: 'https://github.com/', target: '_github' },
+    { icon: <LinkedInIcon />, href: 'https://www.linkedin.com/jlalbany', target: '_linkedin' },
     { icon: <SmartphoneIcon />, href: 'tel:+33617550738', target: '_phone' },
   ];
 
   return (
-      <ol className="socials">
-        {socialIcons.map((social) => (
-          <li
-            key={social.href}
-            style={{ color: hoveredIndex === social.href ? '#DA231B' : '#030303' }}
-            onMouseEnter={() => handleMouseEnter(social.href)}
-            onMouseLeave={handleMouseLeave}
+    <ol className="socials">
+      {socialIcons.map((social) => (
+        <li
+          key={social.href}
+          // jaune: #E8C328 vert: #165421
+          style={{ padding: '0 1em', color: hoveredIndex === social.href ? '#E8C328' : '#165421', transition: '0.2s' }}
+          onMouseEnter={() => handleMouseEnter(social.href)}
+          onMouseLeave={handleMouseLeave}
+        >
+          <a
+            href={social.href}
+            target="_blank"
+            rel="noopener noreferrer"
           >
-            <a
-              className={`socials__icon ${hoveredIndex === social.href ? 'socials__icon--hovered' : ''}`}
-              href={social.href}
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              {social.icon}
-            </a>
-          </li>
-        ))}
-      </ol>
+            {social.icon}
+          </a>
+        </li>
+      ))}
+    </ol>
   );
 }
 
