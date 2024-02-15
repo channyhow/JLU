@@ -8,7 +8,10 @@
   width: 100%;
   height: 100%;
   padding: 2em;
-
+// for laptop
+@media screen and (max-width: 767px) {
+    padding: 0.5em;
+}
   h3 {
     // same as header__logo
     padding-bottom: 1em;
@@ -27,8 +30,13 @@
     display: grid;
     grid-template-columns: repeat(4, 1fr); /* 3 columns */
     grid-template-rows: repeat(2, auto); /* 3 rows */
-    padding: 2em;
-    gap: 20px; /* Add gap between grid items */
+    gap: 10px; /* Add gap between grid items */
+      padding: 2em;
+      @media screen and (max-width: 767px) {
+        padding:0.5em 0;
+        gap: 0px; /* Add gap between grid items */
+
+    }
   
     &__icon {
       display: flex;
@@ -37,6 +45,9 @@
       height: 80px; /* Adjust as needed */
       color: #e8c328;
       scale: 1.2;
+      @media screen and (max-width: 767px) {
+        scale: 1;
+    }
     }
   
     &__name {

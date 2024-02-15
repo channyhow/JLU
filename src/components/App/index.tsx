@@ -32,9 +32,12 @@ function App() {
       {/* Render Drawer and Logo only if not on landing page and screen is mobile */}
       {isMobile && !isLanding && (
         <div className="app__mobile-header">
-          <SwipeableTemporaryDrawer />
           <div>
-            <Logo />
+            <SwipeableTemporaryDrawer />
+          </div>
+          <div style={{flex:"1"}}>
+            {" "}
+            <Logo scale={"0.4"} color= {"#E5D9D5"}/>
           </div>
         </div>
       )}
@@ -43,21 +46,20 @@ function App() {
           {/* Render Header if not on landing page and not on mobile */}
           {!isLanding && !isMobile && <Header />}
           {/* Define routes for different pages */}
-          <div className="app__routes">       
-          <Routes>
-            <Route path="/" element={<Landing />} />
-            <Route path="/home" element={<Main />} />
-            <Route path="/about" element={<About />} />
-            <Route path="/work" element={<Experience />} />
-            <Route path="/edu" element={<Education />} />
-            <Route path="/contact" element={<Contact />} />
-          </Routes></div>
-   
-        </div>      
-      {/* Render copyright footer if not on landing page */}
-  
+          <div className="app__routes">
+            <Routes>
+              <Route path="/" element={<Landing />} />
+              <Route path="/home" element={<Main />} />
+              <Route path="/about" element={<About />} />
+              <Route path="/work" element={<Experience />} />
+              <Route path="/edu" element={<Education />} />
+              <Route path="/contact" element={<Contact />} />
+            </Routes>
+          </div>
+        </div>
+        {/* Render copyright footer if not on landing page */}
       </div>
-    {!isLanding && (
+      {!isLanding && (
         <div className="app__footer">
           <Copyright />
         </div>

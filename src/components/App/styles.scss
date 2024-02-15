@@ -7,14 +7,16 @@
   flex-direction: column; // Stack children vertically
   justify-content: center; // Center horizontally
   overflow-y: hidden;
-  // padding: 1em;
 
   &__mobile-header {
-    display: flex;
-    justify-content: space-between; // Spread elements horizontally
-    align-items: center; // Center items vertically
-    padding: 0 1em; // Adjust padding as needed
+display: flex;
+justify-content: space-between;
+padding: 1em 0;
+    img {
+      height: auto; // Make sure the image height adjusts properly
+    }
   }
+  
 
   &__outer-container {
     flex: 1;
@@ -36,11 +38,11 @@
     display: flex;
     width: 100%;
     max-width: 1280px;
-    margin: auto; // Center horizontally
+    margin: auto; 
     padding: 0 1em;
     flex-direction: column; // Stack children vertically
     // 450 so that can see work completely
-    height: 500px;
+    height: 450px;
     overflow-y: auto; // Add overflow-y to enable scrolling if content exceeds container height
 
     @media screen and (min-width: 768px) {
@@ -52,14 +54,4 @@
   &__routes {
 flex: 1;
   }
-
-  // &__footer {
-  //   width: 100%;
-  //   padding: 2em;
-
-  //   @media screen and (min-width: 768px) {
-  //     padding: 0 2em;
-  //     text-align: left;
-  //   }
-  // }
 }

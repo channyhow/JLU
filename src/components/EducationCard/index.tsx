@@ -27,9 +27,9 @@ function EducationCard({ education }: EducationCardProps) {
     setClickedIndex(edu.id);
   };
 
-  const isDataTooLong = (data: string) => {
-    return data.length > 10; // For example, consider data too long if it exceeds 20 characters
-  };
+  // const isDataTooLong = (data: string) => {
+  //   return data.length > 10; // For example, consider data too long if it exceeds 20 characters
+  // };
 
   return (
     <div className="education-card">
@@ -42,7 +42,7 @@ function EducationCard({ education }: EducationCardProps) {
         >
           {/* Company card button */}
           <button type="submit" onClick={() => handleEducationClick(edu)}
-          style={{textAlign:'left'}}>
+         >
             <span
   className= 'education-card__school'
   style={{

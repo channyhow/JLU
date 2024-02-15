@@ -1,8 +1,11 @@
 import React, { useState } from 'react';
 import { NavLink } from 'react-router-dom';
 
-function Navigation() {
+type TextAlign = 'left' | 'right' | 'center' | 'justify';
+
+function Navigation({ color, textAlign, hoverColor }: { color?: string; textAlign?: TextAlign; hoverColor?: string }) {
   const [hoveredIndex, setHoveredIndex] = useState<string | null>(null);
+
   const handleMouseEnter = (href: string) => {
     setHoveredIndex(href);
   };
@@ -19,17 +22,15 @@ function Navigation() {
   ];
 
   return (
-    <ul style={{ listStyle: 'none', padding: '1.5em', textAlign: 'right' }}>
+    <ul style={{ listStyle: 'none', padding: '1.5em', textAlign: textAlign }}>
       {pages.map((page) => (
         <li key={page.href}>
           <NavLink to={page.href}>
             <h4
-                // jaune: #E8C328 vert: #165421
               style={{
                 padding: '0.5em 0',
-                color: hoveredIndex === page.href ? '#E8C328' : '#165421',
+                color: hoveredIndex === page.href ? hoverColor : color,
                 transition: '0.2s',
-
               }}
               onMouseEnter={() => handleMouseEnter(page.href)}
               onMouseLeave={handleMouseLeave}

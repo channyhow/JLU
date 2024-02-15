@@ -2,12 +2,17 @@ import React, { useState } from 'react';
 import { NavLink } from 'react-router-dom';
 import logo from '../../assets/JL LOGO_150 NOIR.svg';
 import logoHover from '../../assets/JL LOGO_150 JAUNE NOIR.svg';
+import logoRose from '../../assets/JL LOGO_150 ROSE.svg';
+import logoRoseHover from '../../assets/JL LOGO_150 ROSE JAUNE.svg';
+import { useMediaQuery } from '@mui/material';
 
-function Logo() {
+function Logo({ scale, color }: { scale?: string, color?: string }) {
+  // Check if the screen width is mobile
+  const isMobile = useMediaQuery("(max-width: 767px)");
   const [currentLogo, setCurrentLogo] = useState(logo);
 
-  const handleMouseEnter = () => setCurrentLogo(logoHover);
-  const handleMouseLeave = () => setCurrentLogo(logo);
+  const handleMouseEnter = () => setCurrentLogo(isMobile ? logoRoseHover : logoHover);
+  const handleMouseLeave = () => setCurrentLogo(isMobile ? logoRose : logo);
 
   return (
     <NavLink to="/home">
@@ -16,7 +21,7 @@ function Logo() {
         alt="Jean-Ludovic Albany Logo" 
         onMouseEnter={handleMouseEnter}
         onMouseLeave={handleMouseLeave}
-        // style={{padding:'1.5em 0'}}
+        style={{ transform: `scale(${scale})`, filter: `brightness(100%)` }} // Default color filter
       />
     </NavLink>
   );

@@ -5,9 +5,13 @@ function Copyright() {
   return (
     <div className="copyright">
       <p className="copyright__body">
-        Coded with ♡ in
+        Coded with ♡ by
         {' '}
-        <span>Visual Studio Code</span>
+        <a
+            href='https://channyhow.com/'
+            target="_blank"
+            rel="noopener noreferrer"
+          ><span>Channy How</span></a>
         .
         {' '}
         <br />
@@ -16,9 +20,10 @@ function Copyright() {
         {' '}
         <span>Vite.js</span>
         {' '}
-        and
-        {' '}
-        <span>SCSS</span>
+       
+        <span>React</span>        {' '}
+and        {' '}
+<span> Scss</span>
         , deployed with
         {' '}
         <span>Netlify</span>

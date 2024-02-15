@@ -62,7 +62,7 @@ function ExperienceCard({ experiences }: ExperienceCardProps) {
           >
             {/* Company card button */}
             <button type="submit" onClick={() => handleCompanyClick(exp)}
-            style={{textAlign:'left'}}
+            
             >
               {/* Company name */}
               <span

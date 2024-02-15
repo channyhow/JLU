@@ -43,27 +43,31 @@ export default function SwipeableTemporaryDrawer() {
         sx={{
           display: "flex",
           flexDirection: "column",
-          justifyContent: "space-evenly",
+          // alignItems: 'center', // Center items horizontally
+          justifyContent: "space-evenly", // Center items vertically
           height: "100%",
           width: "100%",
-          backgroundColor: "#e5d9d5",
+          backgroundColor: "#e0bc0b ",
+          padding: "2em",
         }}
         role="presentation"
         onClick={toggleDrawer(anchor, false)}
         onKeyDown={toggleDrawer(anchor, false)}
       >
-        <div style={{ scale: "0.8" }}>
-          <Logo />
-          <Socials />
-          <Navigation />
+        <div style={{ scale: "0.8"}}>
+          <div style={{marginBottom:'1em', scale: "0.5"}}><MiniLogo /></div>
+          
+          <Socials color={"#e5d9d5"} hoverColor={"#e8c328"} />
+          <Navigation color={"#e5d9d5"} textAlign={"center"} hoverColor={"#e8c328"} />
         </div>
       </Box>
     </SwipeableDrawer>
   );
 
   return (
-    <div style={{ padding: "1em 0" }}>
+    <div style={{ padding: "1em " }}>
       <div style={{ display: "flex", justifyContent: "space-between" }}>
+        {" "}
         <Button onClick={toggleDrawer("menu", true)}>
           <AlignVerticalCenterIcon
             sx={{
@@ -71,9 +75,12 @@ export default function SwipeableTemporaryDrawer() {
             }}
           />
         </Button>
-        <MiniLogo />
+        {list("menu")}
+        <div style={{ scale: "0.2" }}>
+          {" "}
+          <Logo />
+        </div>
       </div>
-      {list("menu")}
     </div>
   );
 }

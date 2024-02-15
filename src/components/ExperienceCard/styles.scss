@@ -1,5 +1,14 @@
 @use './../../styles/vars';
 
-// .experience-card, .education-card {
-//     padding: 1em;
-// }
+.experience-card {
+    // Default styles for mobile
+  button{text-align: center; // Center school names on mobile by default
+      @media screen and (min-width: 768px) {
+        // Additional styles for laptops/desktops
+        text-align: left; // Align school names to the left on laptops/desktops
+      }
+    }
+  }    
+  
+  
+      

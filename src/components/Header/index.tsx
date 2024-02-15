@@ -20,10 +20,10 @@ function Header() {
         <div className="header__logo"
                 style={{paddingBottom:'1.5em'}}
 >
-          <Logo />
+          <Logo scale={"1"} />
         </div>
-        <Socials />
-        <Navigation />
+        <Socials color={"#2a601f"} hoverColor={"#e8c328"} />
+        <Navigation color={"#2a601f"} textAlign={"right"} hoverColor={"#e8c328"} />
       </div>
     </header>
   );
