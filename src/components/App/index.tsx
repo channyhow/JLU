@@ -17,6 +17,7 @@ import Experience from "../../pages/Experience";
 import Contact from "../../pages/Contact";
 import Copyright from "../Copyright";
 import Logo from "../Logo";
+
 import "./styles.scss";
 
 function App() {
@@ -35,9 +36,9 @@ function App() {
           <div>
             <SwipeableTemporaryDrawer />
           </div>
-          <div style={{flex:"1"}}>
+          <div>
             {" "}
-            <Logo scale={"0.35"} />
+            <Logo width={'150px'} padding={'1em '} />
           </div>
         </div>
       )}
