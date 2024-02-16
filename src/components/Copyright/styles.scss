@@ -2,14 +2,16 @@
 
 .copyright {
   padding: 1em;
-  position: fixed;
-  bottom: 0;
+  // position: fixed;
+  // bottom: 0;
   font-size: 0.8em;
   width: 100%;
       color: #e5d9d5;
       text-align: right;
+      display: flex;
+      
 // for laptop
-      @media screen and (max-width: 767px) {
+      @media screen and (mAX-width: 1023px) {
         text-align: center;
       }
 }

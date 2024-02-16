@@ -3,7 +3,7 @@
 .education-card {
   // Default styles for mobile
 button{text-align: center; // Center school names on mobile by default
-    @media screen and (min-width: 768px) {
+    @media screen and (min-width: 1024px) {
       // Additional styles for laptops/desktops
       text-align: left; // Align school names to the left on laptops/desktops
     }

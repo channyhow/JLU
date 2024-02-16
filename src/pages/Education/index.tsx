@@ -1,10 +1,14 @@
 import React from "react";
 import "./styles.scss";
-import educationData from "../../data/educationDate.json";
+import educationData from "../../utils/data/educationDate.json";
 import EducationCard from "../../components/EducationCard";
 import { motion } from "framer-motion";
+import DataCard from "../../components/DataCard";
+import { convertEducationToCommonFields } from "../../utils/dataConversion";
 
 function Education() {
+   // Convert the experience data to the common fields format
+   const commonEducationData = convertEducationToCommonFields(educationData);
   return (
     <motion.div
       initial={{ opacity: 0, y: 0 }} // Initial state of the component
@@ -13,7 +17,9 @@ function Education() {
       className="education"
     >
       <h3>education</h3>
-      <EducationCard education={educationData} />
+      {/* <EducationCard education={educationData} /> */}
+
+<DataCard data={commonEducationData}/>
     </motion.div>
   );
 }

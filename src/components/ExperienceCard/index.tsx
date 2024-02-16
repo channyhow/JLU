@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import './styles.scss';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import ExpandLessIcon from '@mui/icons-material/ExpandLess';
-import { IExperience } from '../../@types';
+import { IExperience } from '../../utils/@types';
 
 interface ExperienceCardProps {
   experiences: IExperience[];
@@ -59,6 +59,7 @@ function ExperienceCard({ experiences }: ExperienceCardProps) {
             onMouseEnter={() => handleMouseEnter(exp.id)}
             onMouseLeave={handleMouseLeave}
             key={exp.id}
+            className="experience-card__container"
           >
             {/* Company card button */}
             <button type="submit" onClick={() => handleCompanyClick(exp)}

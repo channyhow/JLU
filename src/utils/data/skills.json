@@ -1,0 +1,10 @@
+[
+    { "name": "lancement de campagne", "icon": "RocketLaunchIcon" },
+    { "name": "gestion de tags", "icon": "TagIcon" },
+    { "name": "intégration de solutions de tracking", "icon": "LocationSearchingIcon" },
+    { "name": "mise en place de TMS", "icon": "BarChartIcon" },
+    { "name": "web analytics", "icon": "AssessmentIcon" },
+    { "name": "online campaign management", "icon": "ManageAccountsIcon" },
+    { "name": "advertising operations", "icon": "CampaignIcon" },
+    { "name": "google ad manager", "icon": "GoogleIcon" }
+  ]

@@ -1,0 +1,62 @@
+@use "./../../styles/vars";
+
+.skills {
+  display: grid;
+  grid-template-columns: repeat(
+    auto-fill,
+    minmax(120px, 1fr)
+  ); // Adjusted for a tighter layout
+  gap: 15px; // Reduced gap for a compact look
+  padding: 1.5em ;
+  // background-color: #f4f4f4; // A light background for contrast
+
+  @media screen and (mAX-width: 1023px) {
+    grid-template-columns: repeat(
+      auto-fill,
+      minmax(80px, 1fr)
+    ); // Further adjust for mobile
+    padding: 1em 0;
+    gap: 10px;
+  }
+
+  &__container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    background-color: rgba(255, 255, 255, 0.3); // White cards for a clean look
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); // Soft shadow for depth
+    border-radius: 5px; // Rounded corners for a modern feel
+    transition: box-shadow 0.3s ease; // Smooth shadow transition
+    padding: 1em;
+    &:hover {
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); // Slightly more pronounced shadow on hover
+
+      .skills__name {
+        font-size: 0.8em; // Ensure the name is readable but not too prominent
+        opacity: 1; // Show the name without moving the icon
+        margin: 0.5em 0;
+      }
+    }
+  }
+
+  &__icon {
+    color: #e8c328; // A corporate blue for icons
+    font-size: 2rem; // Icon size kept large for visibility
+    margin-bottom: 5px; // Space between icon and name
+    @media screen and (mAX-width: 1023px) {
+      font-size: 1.75rem; // Slightly smaller icons on mobile for balance
+    }
+  }
+
+  &__name {
+    opacity: 0; // Start with the name hidden for a clean look
+    transition: opacity 0.3s ease; // Smooth appearance for the name
+    color: #e8c328; // Dark grey for text, ensuring readability
+    text-transform: uppercase; // Avoid uppercase for a more formal appearance
+    text-align: center;
+    margin-top: 0; // Adjusted spacing
+    font-size: 0.85em; // Small, legible font size
+  }
+}

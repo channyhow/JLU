@@ -1,12 +1,39 @@
 @use './../../styles/vars';
  
 .experience-card {
+  justify-content: center;
   // Default styles for mobile
+  @media screen and (min-width: 1024px) {
+ flex-direction: column;
+  }
+
   &__details {
 align-items: center;
-    @media screen and (min-width: 768px) {
+    @media screen and (min-width: 1024px) {
       // Additional styles for laptops/desktops
-      align-items: flex-end; // Align company names to the left on laptops/desktops
+      align-items: flex-start; // Align company names to the left on laptops/desktops
     }
   }
+
+  &__container {
+    flex-direction: column;
+    // justify-content: center;
+    // align-items: center;
+        @media screen and (min-width: 1024px) {
+          // Additional styles for laptops/desktops
+          align-items: flex-start; // Align company names to the left on laptops/desktops
+        }
+      }
+}
+
+.modal-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  @media screen and (min-width: 1024px) {
+    // Additional styles for laptops/desktops
+    align-items: flex-start; // Align company names to the left on laptops/desktops
+  }
+
 }

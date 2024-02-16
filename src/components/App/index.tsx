@@ -19,10 +19,11 @@ import Copyright from "../Copyright";
 import Logo from "../Logo";
 
 import "./styles.scss";
+import Socials from "../Socials";
 
 function App() {
   // Check if the screen width is mobile
-  const isMobile = useMediaQuery("(max-width: 767px)");
+  const isMobile = useMediaQuery("(mAX-width: 1023px)");
 
   // Get the current location using react-router-dom
   const location = useLocation();
@@ -38,7 +39,7 @@ function App() {
           </div>
           <div>
             {" "}
-            <Logo width={'150px'} padding={'1em '} />
+            <Logo width={"150px"} padding={"1em "} />
           </div>
         </div>
       )}
@@ -59,12 +60,23 @@ function App() {
           </div>
         </div>
         {/* Render copyright footer if not on landing page */}
+      </div>{" "}
+
+      <div className="app__footer" style={{ display: "flex", flexDirection: "column" }}>
+        {" "}
+        {isMobile && !isLanding && (
+          <div className="app__socials" 
+          style={{ scale: "0.8" }}
+          >
+            <Socials color={"#e5d9d5"} hoverColor={"#e5d9d5"} />
+          </div>
+        )}
+        {!isLanding && (
+          <div >
+            <Copyright />
+          </div>
+        )}
       </div>
-      {!isLanding && (
-        <div className="app__footer">
-          <Copyright />
-        </div>
-      )}
     </div>
   );
 }

@@ -8,7 +8,7 @@ import { useMediaQuery } from "@mui/material";
 
 function Logo({ width, padding }: { width?: string; padding?: string }) {
   // Check if the screen width is mobile
-  const isMobile = useMediaQuery("(max-width: 767px)");
+  const isMobile = useMediaQuery("(mAX-width: 1023px)");
   const [currentLogo, setCurrentLogo] = useState(isMobile ? logoRose : logo);
 
   const handleMouseEnter = () =>
