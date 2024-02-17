@@ -12,21 +12,21 @@ const CookieConsent = () => {
   //   setConsent(userConsent === 'true');
   // }, []);
 
-  const initializeAnalytics = () => {
-    if (window.gtag) {
-      window.gtag('config', GA_TRACKING_ID, {
-        'cookie_expires': 0 // Adjust based on your requirements
-      });
-    }
-  };
+  // const initializeAnalytics = () => {
+  //   if (window.gtag) {
+  //     window.gtag('config', GA_TRACKING_ID, {
+  //       'cookie_expires': 0 // Adjust based on your requirements
+  //     });
+  //   }
+  // };
 
-  const handleAccept = () => {
-    setConsent(true);
-    localStorage.setItem('cookieConsent', 'true');
-    initializeAnalytics(); // Call this function to initialize analytics after consent
-  };
+  // const handleAccept = () => {
+  //   setConsent(true);
+  //   localStorage.setItem('cookieConsent', 'true');
+  //   initializeAnalytics(); // Call this function to initialize analytics after consent
+  // };
 
-  if (consent) return null; // If consent is given, don't show the banner
+  // if (consent) return null; // If consent is given, don't show the banner
 
   return (
     <div
