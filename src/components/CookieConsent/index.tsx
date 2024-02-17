@@ -2,10 +2,10 @@ import React, { useState, useEffect } from 'react';
 import './styles.scss';
 
 // Replace 'GA_TRACKING_ID' with your actual Google Analytics tracking ID
-const GA_TRACKING_ID = 'YOUR_GA_TRACKING_ID';
+// const GA_TRACKING_ID = 'YOUR_GA_TRACKING_ID';
 
 function CookieConsent() {
-  const [consent, setConsent] = useState(false);
+  // const [consent, setConsent] = useState(false);
 
   // useEffect(() => {
   //   const userConsent = localStorage.getItem('cookieConsent');
@@ -51,7 +51,8 @@ function CookieConsent() {
 
       <button
         style={{ background: 'black', color: 'white', padding: '0.5em 1em' }}
-        onClick={handleAccept}
+        type="submit"
+        // onClick={handleAccept}
       >
         <h4>Accept</h4>
       </button>
