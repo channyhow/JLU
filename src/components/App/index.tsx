@@ -20,6 +20,7 @@ import Logo from "../Logo";
 
 import "./styles.scss";
 import Socials from "../Socials";
+import CookieConsent from "../CookieConsent";
 
 function App() {
   // Check if the screen width is mobile
@@ -50,6 +51,7 @@ function App() {
           {/* Define routes for different pages */}
           <div className="app__routes">
             <Routes>
+              
               <Route path="/" element={<Landing />} />
               <Route path="/home" element={<Main />} />
               <Route path="/about" element={<About />} />
@@ -75,7 +77,8 @@ function App() {
           <div >
             <Copyright />
           </div>
-        )}
+        )}      <CookieConsent/>
+
       </div>
     </div>
   );
