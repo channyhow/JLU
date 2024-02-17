@@ -1,10 +1,10 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect } from 'react';
 import './styles.scss';
 
 // Replace 'GA_TRACKING_ID' with your actual Google Analytics tracking ID
-const GA_TRACKING_ID = "YOUR_GA_TRACKING_ID";
+const GA_TRACKING_ID = 'YOUR_GA_TRACKING_ID';
 
-const CookieConsent = () => {
+function CookieConsent() {
   const [consent, setConsent] = useState(false);
 
   // useEffect(() => {
@@ -32,22 +32,31 @@ const CookieConsent = () => {
     <div
       className="cookie-consent-banner"
       style={{
-        position: "fixed",
-        bottom: "0",
-        width: "100%",
-        backgroundColor: "white",
-        textAlign: "center",
-        padding: "10px",
+        position: 'fixed',
+        bottom: '0',
+        width: '100%',
+        backgroundColor: 'white',
+        textAlign: 'center',
+        padding: '10px',
       }}
     >
-      <h4  style={{padding:"1em"}}>
-        We use cookies to improve your experience. <br/> By continuing to use our
-        site, you accept our use of cookies.
+      <h4 style={{ padding: '1em' }}>
+        We use cookies to improve your experience.
+        {' '}
+        <br />
+        {' '}
+        By continuing to use
+        our site, you accept our use of cookies.
       </h4>
-     
-      <button  style={{background:"black", color:"white", padding:"0.5em 1em"}} onClick={handleAccept}><h4>Accept</h4></button>
+
+      <button
+        style={{ background: 'black', color: 'white', padding: '0.5em 1em' }}
+        onClick={handleAccept}
+      >
+        <h4>Accept</h4>
+      </button>
     </div>
   );
-};
+}
 
 export default CookieConsent;
