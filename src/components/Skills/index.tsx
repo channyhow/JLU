@@ -4,7 +4,7 @@ import RocketLaunchIcon from '@mui/icons-material/RocketLaunch';
 import TagIcon from '@mui/icons-material/Tag';
 import LocationSearchingIcon from '@mui/icons-material/LocationSearching';
 import BarChartIcon from '@mui/icons-material/BarChart';
-import NoteIcon from '@mui/icons-material/Note';
+// import NoteIcon from '@mui/icons-material/Note';
 import AssessmentIcon from '@mui/icons-material/Assessment';
 import CampaignIcon from '@mui/icons-material/Campaign';
 import ManageAccountsIcon from '@mui/icons-material/ManageAccounts';
@@ -36,10 +36,13 @@ function Skills() {
 
   return (
     <div className="skills">
-      {skills.map((skill, index) => (
-        <NavLink to="/work">
+      {skills.map((skill) => (
+        <NavLink
+          to="/work"
+          key={skill.name}
+        >
           <div
-            key={index}
+            // key={index}
             className="skills__container"
             onMouseEnter={() => handleMouseEnter(skill.name)}
             onMouseLeave={handleMouseLeave}
