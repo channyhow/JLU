@@ -1,9 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import {
-  BrowserRouter as Router,
   Routes,
   Route,
-  NavLink,
+  Navigate,
   useLocation,
 } from 'react-router-dom';
 
@@ -25,7 +24,7 @@ import CookieConsent from '../CookieConsent';
 
 function App() {
   // Check if the screen width is mobile
-  const isMobile = useMediaQuery('(mAX-width: 1023px)');
+  const isMobile = useMediaQuery('(max-width: 1023px)');
 
   // Get the current location using react-router-dom
   const location = useLocation();
@@ -53,7 +52,7 @@ function App() {
           <div className="app__routes">
             <Routes>
 
-              <Route path="/" element={<Landing />} />
+              <Route path="/" element={isMobile ? <Navigate to="/home" replace /> : <Landing />} />
               <Route path="/home" element={<Main />} />
               <Route path="/about" element={<About />} />
               <Route path="/work" element={<Experience />} />
