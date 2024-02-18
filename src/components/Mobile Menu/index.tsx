@@ -1,20 +1,20 @@
-import "./styles.scss";
-import { useLocation } from "react-router-dom";
-import Logo from "../Logo";
-import SwipeableTemporaryDrawer from "../Drawer";
+import './styles.scss';
+import { useLocation } from 'react-router-dom';
+import Logo from '../Logo';
+import SwipeableTemporaryDrawer from '../Drawer';
 
 function MobileMenu() {
   const location = useLocation();
 
   // Don't show the header on the landing page
-  if (location.pathname === "/") {
+  if (location.pathname === '/') {
     return null;
   }
 
   return (
     <div className="mobile-header">
       <SwipeableTemporaryDrawer />
-      <div className="mobile-header__logo" style={{width:'25%'}}>
+      <div className="mobile-header__logo" style={{ width: '25%' }}>
         <Logo />
         {/* <h1>hello</h1> */}
       </div>

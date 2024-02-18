@@ -4,13 +4,12 @@ import { motion } from 'framer-motion';
 import { NavLink } from 'react-router-dom';
 
 function About() {
-
   return (
     <motion.div
-    initial={{ opacity: 0, y: 0 }} // Initial state of the component
-    animate={{ opacity: 1, y: 0 }} // Animation to apply
-    transition={{ duration: 0.5}} // Transition duration      
-    className="about"
+      initial={{ opacity: 0, y: 0 }} // Initial state of the component
+      animate={{ opacity: 1, y: 0 }} // Animation to apply
+      transition={{ duration: 0.5 }} // Transition duration
+      className="about"
     >
       <h3
         className="about__title"
@@ -36,8 +35,7 @@ function About() {
         envers l&apos;exploration, l&apos;excellence et le respect de notre environnement.
         {' '}
       </p>
-      <NavLink to={'/contact'}><h4 className="about__signature">Jean-Ludovic Albany</h4></NavLink>
-
+      <NavLink to="/contact"><h4 className="about__signature">Jean-Ludovic Albany</h4></NavLink>
 
     </motion.div>
   );

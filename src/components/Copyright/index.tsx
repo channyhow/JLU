@@ -8,10 +8,12 @@ function Copyright() {
         Coded with ♡ by
         {' '}
         <a
-            href='https://channyhow.com/'
-            target="_blank"
-            rel="noopener noreferrer"
-          ><span>Channy How</span></a>
+          href="https://channyhow.com/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <span>Channy How</span>
+        </a>
         .
         {' '}
         <br />
@@ -20,10 +22,14 @@ function Copyright() {
         {' '}
         <span>Vite.js</span>
         {' '}
-       
-        <span>React</span>        {' '}
-and        {' '}
-<span> Scss</span>
+
+        <span>React</span>
+        {' '}
+        {' '}
+        and
+        {' '}
+        {' '}
+        <span> Scss</span>
         , deployed with
         {' '}
         <span>Netlify</span>

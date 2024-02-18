@@ -11,20 +11,19 @@ import ManageAccountsIcon from '@mui/icons-material/ManageAccounts';
 import GoogleIcon from '@mui/icons-material/Google';
 import { NavLink } from 'react-router-dom';
 
-  const skills = [
-    { name: "lancement de campagne", icon: <RocketLaunchIcon /> },
-    { name: "gestion de tags", icon: <TagIcon /> },
-    { name: "intégration de solutions de tracking", icon: <LocationSearchingIcon /> },
-    { name: "mise en place de TMS", icon: <BarChartIcon /> },
-    // { name: "solutions pour publisher", icon: <NoteIcon /> },
-    { name: "web analytics", icon: <AssessmentIcon /> },
-    { name: "online campaign management", icon: <ManageAccountsIcon /> },
-    { name: "advertising operations", icon: <CampaignIcon /> },
-    { name: "google ad manager", icon: <GoogleIcon /> },
-  ];
+const skills = [
+  { name: 'lancement de campagne', icon: <RocketLaunchIcon /> },
+  { name: 'gestion de tags', icon: <TagIcon /> },
+  { name: 'intégration de solutions de tracking', icon: <LocationSearchingIcon /> },
+  { name: 'mise en place de TMS', icon: <BarChartIcon /> },
+  // { name: "solutions pour publisher", icon: <NoteIcon /> },
+  { name: 'web analytics', icon: <AssessmentIcon /> },
+  { name: 'online campaign management', icon: <ManageAccountsIcon /> },
+  { name: 'advertising operations', icon: <CampaignIcon /> },
+  { name: 'google ad manager', icon: <GoogleIcon /> },
+];
 
 function Skills() {
-
   const [hoveredSkill, setHoveredSkill] = useState<string | null>(null);
 
   const handleMouseEnter = (skill: string) => {
@@ -35,22 +34,21 @@ function Skills() {
     setHoveredSkill(null);
   };
 
-
   return (
     <div className="skills">
-       {skills.map((skill, index) => (
-  <NavLink to={'/work'}>
-    <div
-    key={index}
-    className="skills__container"
-    onMouseEnter={() => handleMouseEnter(skill.name)}
-    onMouseLeave={handleMouseLeave}
-  >
-    <div className="skills__icon">{skill.icon}</div>
-    <h2 className="skills__name">{skill.name}</h2>
-  </div>
-  </NavLink>
-))}
+      {skills.map((skill, index) => (
+        <NavLink to="/work">
+          <div
+            key={index}
+            className="skills__container"
+            onMouseEnter={() => handleMouseEnter(skill.name)}
+            onMouseLeave={handleMouseLeave}
+          >
+            <div className="skills__icon">{skill.icon}</div>
+            <h2 className="skills__name">{skill.name}</h2>
+          </div>
+        </NavLink>
+      ))}
     </div>
   );
 }

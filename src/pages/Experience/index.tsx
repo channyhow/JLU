@@ -13,13 +13,15 @@ function Experience() {
     <motion.div
       initial={{ opacity: 0, y: 0 }} // Initial state of the component
       animate={{ opacity: 1, y: 0 }} // Animation to apply
-      transition={{ duration: 0.5}} // Transition duration      
+      transition={{ duration: 0.5 }} // Transition duration
       className="experience"
     >
       <h3 className="experience__title">
-work      </h3>
+        work
+        {' '}
+      </h3>
       {/* Now passing the converted data */}
-      <DataCard data={commonExperienceData}/>
+      <DataCard data={commonExperienceData} />
     </motion.div>
   );
 }
