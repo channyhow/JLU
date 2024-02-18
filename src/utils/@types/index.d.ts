@@ -10,11 +10,11 @@ export interface IEducation {
   startYear: string;
   endYear: string;
   school: string;
-  nickname: string;
+  nickname?: string;
   degree: string;
   location: string;
   website?: string;
-  skills: string[];
+  skills?: string[];
 }
 
 export interface IExperience {
@@ -22,11 +22,12 @@ export interface IExperience {
   startYear: string;
   endYear: string;
   company: string;
+  nickname?: string;
   position: string;
   location: string;
   description?: string;
   website?: string;
-  skills: string[];
+  skills?: string[];
 }
 
 export interface ICommonFields {
@@ -34,6 +35,7 @@ export interface ICommonFields {
   id: string;
   title: string; // For education, this could be the degree; for experience, the job title
   organization: string; // For education, this could be the school; for experience, the company name
+  name?: string;
   startYear: string;
   endYear: string;
   details?: string; // A field for additional details or description
@@ -42,7 +44,7 @@ export interface ICommonFields {
 
 export type EducationOrExperience = ICommonFields;
 
- export interface CardProps {
+export interface CardProps {
   data: EducationOrExperience[];
 }
 
