@@ -15,7 +15,7 @@ function About() {
         À propos
       </h3>
       <p className="about__body">
-        Bonjour, je suis Jean Ludovic Albany. Fort de plus de 6 ans d&apos;expérience dans l&apos;industrie en ligne, je me suis spécialisé dans la gestion de campagnes et de projets. J&apos;occupe un rôle pivot entre les clients, les agences et les éditeurs pour obtenir les meilleurs résultats de campagne.
+        Fort de plus de 6 ans d&apos;expérience dans l&apos;industrie en ligne, je me suis spécialisé dans la gestion de campagnes et de projets. J&apos;occupe un rôle pivot entre les clients, les agences et les éditeurs pour obtenir les meilleurs résultats de campagne.
       </p>
       <p className="about__body">
         J&apos;aide également les éditeurs à élargir ou adapter leur inventaire aux réseaux d&apos;échange publicitaire. Avec mon penchant pour résoudre les problèmes de suivi, je vous assure d&apos;obtenir le meilleur mélange de suivi média pour votre campagne.

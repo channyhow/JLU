@@ -13,10 +13,10 @@ function MiniLogo({ scale }: { scale?: string }) {
     <NavLink to="/home">
       <img
         src={currentLogo}
-        alt="Jean-Ludovic Albany Logo" 
+        alt="Jean-Ludovic Albany Logo"
         onMouseEnter={handleMouseEnter}
         onMouseLeave={handleMouseLeave}
-        style={{ transform: `scale(${scale})`, filter: `brightness(100%)` }} // Default color filter
+        style={{ transform: `scale(${scale})`, filter: 'brightness(100%)' }} // Default color filter
       />
     </NavLink>
   );
