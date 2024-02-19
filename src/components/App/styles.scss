@@ -41,7 +41,7 @@
     padding: 0 1em;
     flex-direction: column; // Stack children vertically
     // 450 so that can see work completely
-    height: 450px;
+    height: 600px;
     overflow-y: auto; // Add overflow-y to enable scrolling if content exceeds container height
 
     @media screen and (min-width: 1024px) {
@@ -49,6 +49,7 @@
       scale: 0.9;
       margin: auto;
       padding: 0;
+      height: 450px;
     }
   }
 
