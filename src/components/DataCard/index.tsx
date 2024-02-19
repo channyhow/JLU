@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import './styles.scss';
-import { CardProps, EducationOrExperience } from '../../utils/@types';
+import { CardProps, EducationOrExperience } from '../../types';
 
 function DataCard({ data }: CardProps) {
   const [hoveredIndex, setHoveredIndex] = useState<string | null>(null);

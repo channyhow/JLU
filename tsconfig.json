@@ -19,7 +19,9 @@
   "include": [
     "vite.config.ts",
     ".eslintrc.cjs",
-    "src"
+    "src",
+    "src/**/*",
+    "src/types/**/*.d.ts"
   ],
   "references": [{ "path": "./tsconfig.node.json" }]
 }
