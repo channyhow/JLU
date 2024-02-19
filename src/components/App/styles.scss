@@ -24,7 +24,7 @@
     padding: 0;
     text-align: center;
     height: 100vh;
-    overflow-y: auto; // Add overflow-y to enable scrolling if content exceeds viewport height
+    // overflow-y: auto; // Add overflow-y to enable scrolling if content exceeds viewport height
 
     @media screen and (min-width: 1024px) {
       padding: 0 2em;
