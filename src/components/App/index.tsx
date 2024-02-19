@@ -21,6 +21,7 @@ import Logo from '../Logo';
 import './styles.scss';
 import Socials from '../Socials';
 import CookieConsent from '../CookieConsent';
+import NotFound from '../../pages/404';
 
 function App() {
   // Check if the screen width is mobile
@@ -58,6 +59,8 @@ function App() {
               <Route path="/work" element={<Experience />} />
               <Route path="/edu" element={<Education />} />
               <Route path="/contact" element={<Contact />} />
+              {/* Catch-all route for handling 404 pages */}
+              <Route path="*" element={<NotFound />} />
             </Routes>
           </div>
         </div>
