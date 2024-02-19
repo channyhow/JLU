@@ -77,7 +77,7 @@ function ContactForm() {
             color: 'green', marginBottom: '10px', fontFamily: 'Inter', fontSize: '0.8em',
           }}
           >
-            Thank you for your message!
+            Merci pour votre message!
           </div>
           )}
 
@@ -122,8 +122,9 @@ function ContactForm() {
             <DialogTitle>Oopsie Daisy</DialogTitle>
             <DialogContent>
               <DialogContentText>
-                There&apos;s something about the email address entered,
-                could you have a quick look?
+                Une erreur s&apos;est glissée dans l&apos;adresse email entrée,
+                <br />
+                pourriez-vous y jeter un coup d&apos;oeil?
               </DialogContentText>
             </DialogContent>
             <DialogActions>
