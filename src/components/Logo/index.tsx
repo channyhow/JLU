@@ -4,7 +4,7 @@ import { useMediaQuery } from '@mui/material';
 import logo from '../../assets/JL LOGO_150 NOIR.svg';
 import logoHover from '../../assets/JL LOGO_150 JAUNE NOIR.svg';
 import logoRose from '../../assets/JL LOGO_150 ROSE.svg';
-import logoRoseHover from '../../assets/JL LOGO_150 ROSE JAUNE.svg';
+// import logoRoseHover from '../../assets/JL LOGO_150 ROSE JAUNE.svg';
 
 function Logo({ width, padding }: { width?: string; padding?: string }) {
   // Check if the screen width is mobile
@@ -12,7 +12,7 @@ function Logo({ width, padding }: { width?: string; padding?: string }) {
   const [currentLogo, setCurrentLogo] = useState(isMobile ? logoRose : logo);
 
   const handleMouseEnter = () => setCurrentLogo(isMobile ? logoRose : logo);
-  const handleMouseLeave = () => setCurrentLogo(isMobile ? logoRose : logo);
+  const handleMouseLeave = () => setCurrentLogo(isMobile ? logoRose : logoHover);
 
   // Use the width prop to directly set the width or height of the image
   // Assuming the width prop is a valid CSS value (e.g., '100px', '50%', etc.)
