@@ -2,6 +2,7 @@ import React from 'react';
 import './styles.scss';
 import { motion } from 'framer-motion';
 import ContactForm from '../../components/ContactForm';
+// import ResumeDownload from '../../components/ResumeDownload';
 
 function Contact() {
   return (
@@ -17,6 +18,7 @@ function Contact() {
         contact
       </h3>
       <ContactForm />
+      {/* <ResumeDownload /> */}
     </motion.div>
   );
 }

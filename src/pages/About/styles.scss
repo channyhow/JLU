@@ -1,4 +1,4 @@
-@use "./../../styles/vars";
+@use "./../../styles/vars" as v;
 
 .about {
     p{
@@ -8,6 +8,6 @@
     h4 {
         margin: 2em 0;
 text-align: right;
-color: #2a601f;
+color: v.$primary;
     }
 }

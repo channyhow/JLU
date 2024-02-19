@@ -6,7 +6,7 @@
       }
 
       .b748c4b0-51a7-4ef5-ab87-0ae1124cc1b5 {
-        fill: #e8c328;
+        fill: v.$secondary
       }
     </style>
   </defs>

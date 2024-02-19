@@ -1,4 +1,4 @@
-@use "./../../styles/vars";
+@use "./../../styles/vars" as v;
 
 .main,
 .about,
@@ -15,7 +15,7 @@
   h3 {
     // same as header__logo
     padding-bottom: 1em;
-    color: #e8c328;
+    color: v.$secondary;
   }
 
   h1 {

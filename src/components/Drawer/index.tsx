@@ -57,8 +57,8 @@ export default function SwipeableTemporaryDrawer() {
             <MiniLogo />
           </div>
 
-          <Socials color="#e5d9d5" hoverColor="#e8c328" />
-          <Navigation color="#e5d9d5" textAlign="center" hoverColor="#e8c328" />
+          <Socials color="#e5d9d5" hoverColor="v.$secondary" />
+          <Navigation color="#e5d9d5" textAlign="center" hoverColor="v.$secondary" />
         </div>
       </Box>
     </SwipeableDrawer>

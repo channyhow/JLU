@@ -1,32 +1,41 @@
 // import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import './styles.scss';
+import '../../utils/@types';
 
 // Replace 'GA_TRACKING_ID' with your actual Google Analytics tracking ID
-// const GA_TRACKING_ID = 'YOUR_GA_TRACKING_ID';
+const GA_TRACKING_ID = 'GTM-NJ3VJVF5';
 
 function CookieConsent() {
-  // const [consent, setConsent] = useState(false);
+  const [consent, setConsent] = useState(false);
 
-  // useEffect(() => {
-  //   const userConsent = localStorage.getItem('cookieConsent');
-  //   setConsent(userConsent === 'true');
-  // }, []);
+  useEffect(() => {
+    const userConsent = localStorage.getItem('cookieConsent');
+    setConsent(userConsent === 'true');
+  }, []);
 
-  // const initializeAnalytics = () => {
-  //   if (window.gtag) {
-  //     window.gtag('config', GA_TRACKING_ID, {
-  //       'cookie_expires': 0 // Adjust based on your requirements
-  //     });
-  //   }
-  // };
+  const initializeAnalytics = () => {
+    if (!document.querySelector(`script[src="https://www.googletagmanager.com/gtm.js?id=${GA_TRACKING_ID}"]`)) {
+      const script = document.createElement('script');
+      script.src = `https://www.googletagmanager.com/gtm.js?id=${GA_TRACKING_ID}`;
+      script.async = true;
+      document.head.appendChild(script);
+    }
 
-  // const handleAccept = () => {
-  //   setConsent(true);
-  //   localStorage.setItem('cookieConsent', 'true');
-  //   initializeAnalytics(); // Call this function to initialize analytics after consent
-  // };
+    // This should now be recognized by TypeScript without error
+    window.dataLayer = window.dataLayer || [];
+    window.dataLayer.push({
+      event: 'consent_given',
+    });
+  };
 
-  // if (consent) return null; // If consent is given, don't show the banner
+  const handleAccept = () => {
+    setConsent(true);
+    localStorage.setItem('cookieConsent', 'true');
+    initializeAnalytics(); // Call this function to initialize analytics after consent
+  };
+
+  if (consent) return null; // If consent is given, don't show the banner
 
   return (
     <div
@@ -52,7 +61,7 @@ function CookieConsent() {
       <button
         style={{ background: 'black', color: 'white', padding: '0.5em 1em' }}
         type="submit"
-        // onClick={handleAccept}
+        onClick={handleAccept}
       >
         <h4>Accept</h4>
       </button>

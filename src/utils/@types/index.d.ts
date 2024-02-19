@@ -52,3 +52,8 @@ export interface Skill {
   name: string;
   icon: string; // This will match keys in your icon map
 }
+
+export interface Window {
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  dataLayer: any[];
+}

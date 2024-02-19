@@ -1,4 +1,4 @@
-@use "./../../styles/vars";
+@use "./../../styles/vars" as v;
 
 .skills {
   display: grid;
@@ -42,7 +42,7 @@
   }
 
   &__icon {
-    color: #e8c328; // A corporate blue for icons
+    color: v.$secondary; // A corporate blue for icons
     font-size: 2rem; // Icon size kept large for visibility
     margin-bottom: 5px; // Space between icon and name
     @media screen and (mAX-width: 1023px) {
