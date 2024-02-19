@@ -33,7 +33,7 @@ function ContactForm() {
     try {
       if (form.current) {
         // CHANGE THIS BIT
-        await emailjs.sendForm('service_hgkesjn', 'template_xsgu35l', form.current, 'O8_eni2QDzWuo6roS');
+        await emailjs.sendForm('service_y2djk6c', 'template_8h8nlef', form.current, 'NYsnLB7L6KLFz63nQ');
         setIsSuccess(true); // Show success message
         form.current.reset(); // Reset the form
       }
