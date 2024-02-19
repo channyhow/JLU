@@ -67,7 +67,7 @@ function ContactForm() {
         item
         xs={isMobile ? 12 : 6}
         sm={isMobile ? 12 : 6}
-        md={isMobile ? 6 : 12}
+        md={isMobile ? 12 : 6}
         lg={isMobile ? 6 : 12}
         xl={isMobile ? 6 : 12}
       >
