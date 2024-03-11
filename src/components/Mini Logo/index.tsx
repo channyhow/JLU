@@ -10,7 +10,7 @@ function MiniLogo({ width = '100px', padding = '1em 0' }) {
   const handleMouseLeave = () => setCurrentLogo(logo);
 
   return (
-    <NavLink to="/home">
+    <NavLink to="/">
       <img
         src={currentLogo}
         alt="Jean-Ludovic Albany Logo"

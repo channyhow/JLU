@@ -20,7 +20,7 @@ function Logo({ width = '150px', padding = '0', filter = 'none' }) {
   const handleMouseLeave = () => setCurrentLogo(isMobile ? logoRose : logo);
 
   return (
-    <NavLink to="/home">
+    <NavLink to="/">
       <img
         src={currentLogo}
         alt="Jean-Ludovic Albany Logo"

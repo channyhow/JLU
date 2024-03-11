@@ -1,5 +1,6 @@
 import {
-  Routes, Route, Navigate, useLocation,
+  Routes, Route,
+  //  Navigate, useLocation,
 } from 'react-router-dom';
 
 import { useMediaQuery } from '@mui/material';
@@ -23,23 +24,27 @@ function App() {
   const isMobile = useMediaQuery('(max-width: 1023px)');
 
   // Get the current location using react-router-dom
-  const location = useLocation();
-  const isLanding = location.pathname === '/';
+  // const location = useLocation();
+  // const isLanding = location.pathname === '/';
 
   return (
     <div className="app">
       {/* Render Drawer and Logo only if not on landing page and screen is mobile */}
-      {isMobile && !isLanding && (
+      {isMobile
+      // && !isLanding
+      && (
         <div className="app__mobile-header">
           <SwipeableTemporaryDrawer />
         </div>
       )}
       <div className="app__inner-container">
-        {!isMobile && !isLanding && (
-        <div className="app__sidebar">
-          <Header />
-        </div>
-        )}
+        {!isMobile
+        //  && !isLanding
+         && (
+         <div className="app__sidebar">
+           <Header />
+         </div>
+         )}
         {/* Render Header if not on landing page and not on mobile */}
         {/* Define routes for different pages */}
         <div className="app__container">
@@ -47,9 +52,12 @@ function App() {
             <Routes>
               <Route
                 path="/"
-                element={isMobile ? <Navigate to="/home" replace /> : <Main />}
+                element={
+                  // isMobile ? <Navigate to="/" replace /> :
+                  <Main />
+}
               />
-              <Route path="/home" element={<Main />} />
+              {/* <Route path="/" element={<Main />} /> */}
               <Route path="/about" element={<About />} />
               <Route path="/work" element={<Experience />} />
               <Route path="/edu" element={<Education />} />
@@ -64,10 +72,12 @@ function App() {
             className="app__footer"
           >
             {' '}
-            {!isLanding && (
+            {/* {!isLanding && ( */}
             <Copyright />
-            )}
-            {isMobile && !isLanding && (
+            {/* )} */}
+            {isMobile
+            // && !isLanding
+            && (
             <div className="app__socials">
               <Socials color="#fff" hoverColor="#fff" padding="0 1em" opacity="0.6" />
             </div>
