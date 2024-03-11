@@ -5,7 +5,7 @@ function Navigation({
   color = '#133955',
   hoverColor = '#D79FC7',
   padding = '1em',
-  textAlign = 'center',
+  // textAlign = 'center',
 }) {
   const [hoveredIndex, setHoveredIndex] = useState<string | null>(null);
 
@@ -25,7 +25,7 @@ function Navigation({
   ];
 
   return (
-    <ul style={{ listStyle: 'none', padding, textAlign }}>
+    <ul style={{ listStyle: 'none', padding }}>
       {pages.map((page) => (
         <li key={page.href}>
           <NavLink

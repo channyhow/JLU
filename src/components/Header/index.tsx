@@ -17,7 +17,7 @@ function Header() {
       <div className="header__logo">
         <Logo filter="drop-shadow(2px 2px 1px rgba(0,0,0,0.1))" width="" padding="1em" />
       </div>
-      <Navigation color="#F2F0EB" textAlign="right" hoverColor="#e8c328" padding="1em" />
+      <Navigation color="#F2F0EB" hoverColor="#e8c328" padding="1em" />
       <Socials color="#F2F0EB" hoverColor="#e8c328" padding="1em" />
 
     </header>
