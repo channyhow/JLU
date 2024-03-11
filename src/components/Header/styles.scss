@@ -1,14 +1,12 @@
 @use "./../../styles/vars" as v;
 
-  .header {
-display: flex;
+.header {
+  display: flex;
   flex-direction: column;
-  padding: 2em;
-  height: fit-content;
+  padding: 1em;
+  height: 90vh;
+  justify-content: space-around;
 
-  &__container {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
+  @media screen and (max-width: 1023px) {
   }
 }

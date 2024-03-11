@@ -14,16 +14,12 @@ function Header() {
 
   return (
     <header className="header">
-      <div className="header__container">
-        <div
-          className="header__logo"
-          style={{ paddingBottom: '1.5em' }}
-        >
-          <Logo />
-        </div>
-        <Socials color="#2a601f" hoverColor="#e8c328" />
-        <Navigation color="#2a601f" textAlign="right" hoverColor="#e8c328" />
+      <div className="header__logo">
+        <Logo filter="drop-shadow(2px 2px 1px rgba(0,0,0,0.1))" width="" padding="1em" />
       </div>
+      <Navigation color="#F2F0EB" textAlign="right" hoverColor="#e8c328" padding="1em" />
+      <Socials color="#F2F0EB" hoverColor="#e8c328" padding="1em" />
+
     </header>
   );
 }

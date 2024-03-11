@@ -7,9 +7,9 @@ import {
   DialogContent,
   DialogContentText,
   DialogActions,
-  Grid,
 } from '@mui/material';
 import emailjs from 'emailjs-com';
+import './styles.scss';
 
 function ContactForm() {
   const form = useRef<HTMLFormElement | null>(null);
@@ -62,83 +62,75 @@ function ContactForm() {
   }, []);
 
   return (
-    <Grid container justifyContent="center">
-      <Grid
-        item
-        xs={isMobile ? 12 : 6}
-        sm={isMobile ? 12 : 6}
-        md={isMobile ? 12 : 6}
-        lg={isMobile ? 6 : 12}
-        xl={isMobile ? 6 : 12}
+
+    <div>
+      {isSuccess && (
+      <div style={{
+        color: 'green', marginBottom: '10px', fontFamily: 'Inter', fontSize: '0.8em',
+      }}
       >
-        <div className={`contact-form ${isMobile ? 'mobile-width' : ''}`}>
-          {isSuccess && (
-          <div style={{
-            color: 'green', marginBottom: '10px', fontFamily: 'Inter', fontSize: '0.8em',
-          }}
-          >
-            Merci pour votre message!
-          </div>
-          )}
+        Merci pour votre message!
+      </div>
+      )}
 
-          <form
-            ref={form}
-            onSubmit={sendEmail}
-            style={{ display: 'flex', flexDirection: 'column' }}
-          >
-            <TextField
-              id="form-input-control-email"
-              label="Email"
-              name="user_email"
-              placeholder="Email…"
-              required
-              style={{ marginBottom: '1em', width: 'auto' }}
-            />
-            <TextField
-              id="form-input-control-last-name"
-              label="Name"
-              name="user_name"
-              placeholder="Name…"
-              required
-              style={{ marginBottom: '1em' }}
-            />
-            <TextField
-              id="form-textarea-control-opinion"
-              label="Message"
-              name="user_message"
-              placeholder="Message…"
-              required
-              multiline
-              rows={4}
-              style={{ marginBottom: '1em' }}
-            />
-            <Button type="submit" style={{ margin: '1em', backgroundColor: 'rgb(255, 255, 255, 0.4)', color: '#e8c328' }}>
-              Submit
-            </Button>
-          </form>
+      <form
+        ref={form}
+        onSubmit={sendEmail}
+        style={{ display: 'flex', flexDirection: 'column' }}
+        className={`contact-form ${isMobile ? 'mobile-width' : ''}`}
+      >
+        <TextField
+          id="form-input-control-email"
+          label="Email"
+          name="user_email"
+          placeholder="Email…"
+          required
+          style={{ marginBottom: '1em', backgroundColor: 'rgb(255, 255, 255, 0.1)', borderRadius: '5px' }}
+        />
+        <TextField
+          id="form-input-control-last-name"
+          label="Name"
+          name="user_name"
+          placeholder="Name…"
+          required
+          style={{ marginBottom: '1em', backgroundColor: 'rgb(255, 255, 255, 0.1)', borderRadius: '5px' }}
+        />
+        <TextField
+          id="form-textarea-control-opinion"
+          label="Message"
+          name="user_message"
+          placeholder="Message…"
+          required
+          multiline
+          rows={4}
+          style={{ marginBottom: '1em', backgroundColor: 'rgb(255, 255, 255, 0.1)', borderRadius: '5px' }}
+        />
+        <Button type="submit" style={{ margin: '1em', backgroundColor: isMobile ? 'rgb(255, 255, 255, 0.4)' : 'rgb(255, 255, 255, 0.6)', color: '#e8c328' }}>
+          Submit
+        </Button>
+      </form>
 
-          {/* Error dialog */}
-          <Dialog open={isErrorDialogOpen} onClose={handleCloseErrorDialog}>
-            <DialogTitle>Oopsie Daisy</DialogTitle>
-            <DialogContent>
-              <DialogContentText>
-                Une erreur s&apos;est glissée dans l&apos;adresse email entrée,
-                <br />
-                pourriez-vous y jeter un coup d&apos;oeil?
-              </DialogContentText>
-            </DialogContent>
-            <DialogActions>
-              <Button
-                onClick={handleCloseErrorDialog}
-                style={{ margin: '1em', backgroundColor: 'rgb(255, 255, 255, 0.4)', color: '#e8c328' }}
-              >
-                OK
-              </Button>
-            </DialogActions>
-          </Dialog>
-        </div>
-      </Grid>
-    </Grid>
+      {/* Error dialog */}
+      <Dialog open={isErrorDialogOpen} onClose={handleCloseErrorDialog}>
+        <DialogTitle>Oopsie Daisy</DialogTitle>
+        <DialogContent>
+          <DialogContentText>
+            Une erreur s&apos;est glissée dans l&apos;adresse email entrée,
+            <br />
+            pourriez-vous y jeter un coup d&apos;oeil?
+          </DialogContentText>
+        </DialogContent>
+        <DialogActions>
+          <Button
+            onClick={handleCloseErrorDialog}
+            style={{ margin: '1em', backgroundColor: isMobile ? 'rgb(255, 255, 255, 0.4)' : 'rgb(255, 255, 255, 0.6)', color: '#e8c328' }}
+          >
+
+            OK
+          </Button>
+        </DialogActions>
+      </Dialog>
+    </div>
 
   );
 }

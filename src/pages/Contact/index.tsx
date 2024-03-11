@@ -12,13 +12,15 @@ function Contact() {
       transition={{ duration: 0.5 }} // Transition duration
       className="contact"
     >
-      <h3
-        className="contact__title"
-      >
-        contact
-      </h3>
-      <ContactForm />
-      {/* <ResumeDownload /> */}
+      <div className="container">
+        <h4
+          className="contact__title"
+        >
+          contact
+        </h4>
+        <ContactForm />
+      </div>
+
     </motion.div>
   );
 }

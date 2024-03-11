@@ -12,15 +12,15 @@ import GoogleIcon from '@mui/icons-material/Google';
 import { NavLink } from 'react-router-dom';
 
 const skills = [
-  { name: 'lancement de campagne', icon: <RocketLaunchIcon /> },
-  { name: 'gestion de tags', icon: <TagIcon /> },
-  { name: 'intégration de solutions de tracking', icon: <LocationSearchingIcon /> },
-  { name: 'mise en place de TMS', icon: <BarChartIcon /> },
+  { name: 'lancement de campagne', icon: <RocketLaunchIcon sx={{ color: '#D79FC7' }} /> },
+  { name: 'gestion de tags', icon: <TagIcon sx={{ color: '#e8c328' }} /> },
+  { name: 'intégration de solutions de tracking', icon: <LocationSearchingIcon sx={{ color: '#D79FC7' }} /> },
+  { name: 'mise en place de TMS', icon: <BarChartIcon sx={{ color: '#133955' }} /> },
   // { name: "solutions pour publisher", icon: <NoteIcon /> },
-  { name: 'web analytics', icon: <AssessmentIcon /> },
-  { name: 'online campaign management', icon: <ManageAccountsIcon /> },
-  { name: 'advertising operations', icon: <CampaignIcon /> },
-  { name: 'google ad manager', icon: <GoogleIcon /> },
+  { name: 'web analytics', icon: <AssessmentIcon sx={{ color: '#133955' }} /> },
+  { name: 'online campaign management', icon: <ManageAccountsIcon sx={{ color: '#D79FC7' }} /> },
+  { name: 'advertising operations', icon: <CampaignIcon sx={{ color: '#133955' }} /> },
+  { name: 'google ad manager', icon: <GoogleIcon sx={{ color: '#e8c328' }} /> },
 ];
 
 function Skills() {

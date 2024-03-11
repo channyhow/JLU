@@ -4,10 +4,8 @@
     p{
         margin: 1em 0;
     }
-
-    h4 {
-        margin: 2em 0;
-text-align: right;
-color: v.$primary;
+    &__body{
+        padding: 1em;
     }
+    
 }

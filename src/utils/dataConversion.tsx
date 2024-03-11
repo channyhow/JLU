@@ -1,11 +1,11 @@
 // src/utils/dataConversionUtils.ts
 
-import { IEducation, IExperience, EducationOrExperience } from '../types';
+import { IEducation, IExperience, EducationOrExperience, ICommonFields } from '../types';
 
 // Function to convert IEducation to ICommonFields (EducationOrExperience)
 export function convertEducationToCommonFields(
   education: IEducation[],
-): EducationOrExperience[] {
+): ICommonFields[] {
   return education.map((edu) => ({
     id: edu.id,
     title: edu.degree,
@@ -21,7 +21,7 @@ export function convertEducationToCommonFields(
 // Function to convert IExperience to ICommonFields (EducationOrExperience)
 export function convertExperienceToCommonFields(
   experience: IExperience[],
-): EducationOrExperience[] {
+): ICommonFields[] {
   return experience.map((exp) => ({
     id: exp.id,
     title: exp.position,

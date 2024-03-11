@@ -16,12 +16,13 @@ function Experience() {
       transition={{ duration: 0.5 }} // Transition duration
       className="experience"
     >
-      <h3 className="experience__title">
-        work
-        {' '}
-      </h3>
-      {/* Now passing the converted data */}
-      <DataCard data={commonExperienceData} />
+      <div className="container">
+        <h4 className="experience__title">
+          work
+        </h4>
+        <DataCard data={commonExperienceData} />
+      </div>
+
     </motion.div>
   );
 }

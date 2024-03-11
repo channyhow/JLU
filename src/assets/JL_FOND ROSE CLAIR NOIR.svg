@@ -10,7 +10,8 @@
       }
 
       .ecb3d321-c0a5-4b20-9767-c91981a523cd {
-        fill: #faf7f6;
+        fill: #FAF9F6
+;
         stroke: #000;
         stroke-miterlimit: 10;
       }

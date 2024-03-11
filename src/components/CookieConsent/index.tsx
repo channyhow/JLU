@@ -50,14 +50,6 @@ function CookieConsent() {
   return (
     <div
       className="cookie-consent-banner"
-      // style={{
-      //   position: 'fixed',
-      //   bottom: '0',
-      //   width: '100%',
-      //   backgroundColor: 'white',
-      //   textAlign: 'center',
-      //   padding: '10px',
-      // }}
     >
       <h4 style={{ padding: '1em' }}>
         Nous utilisons des cookies pour améliorer votre expérience.

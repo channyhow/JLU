@@ -2,17 +2,19 @@
 
 .copyright {
   padding: 1em;
-  // position: fixed;
-  // bottom: 0;
   font-size: 0.8em;
-  width: 100%;
-      color: #e5d9d5;
-      text-align: right;
-      display: flex;
-      
-// for laptop
-      @media screen and (mAX-width: 1023px) {
-        text-align: center;
-      }
-}
+  color: #e0d3cf;
+  text-align: right;
+  span{
+      font-family: 'EB Garamond';
+      color: #D79FC7;
+  }
 
+  // for mobile
+  @media screen and (max-width: 1023px) {
+    padding: 0.5em;
+    color: #268770;
+    // opacity: 0.6;
+    text-align: center;
+  }
+}

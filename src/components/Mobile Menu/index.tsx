@@ -1,6 +1,5 @@
 import './styles.scss';
 import { useLocation } from 'react-router-dom';
-import Logo from '../Logo';
 import SwipeableTemporaryDrawer from '../Drawer';
 
 function MobileMenu() {
@@ -14,10 +13,6 @@ function MobileMenu() {
   return (
     <div className="mobile-header">
       <SwipeableTemporaryDrawer />
-      <div className="mobile-header__logo" style={{ width: '25%' }}>
-        <Logo />
-        {/* <h1>hello</h1> */}
-      </div>
     </div>
   );
 }

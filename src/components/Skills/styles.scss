@@ -2,30 +2,30 @@
 
 .skills {
   display: grid;
+  width: 100%;
+
   grid-template-columns: repeat(
     auto-fill,
-    minmax(120px, 1fr)
+    minmax(150px, 1fr)
   ); // Adjusted for a tighter layout
   gap: 15px; // Reduced gap for a compact look
   padding: 1.5em ;
-  // background-color: #f4f4f4; // A light background for contrast
 
   @media screen and (mAX-width: 727px) {
-    grid-template-columns: repeat(
-      auto-fill,
-      minmax(80px, 1fr)
-    ); // Further adjust for mobile
+    grid-template-columns: repeat(auto-fill, minmax(152px, 1fr));
     padding: 1em 0;
     gap: 10px;
   }
 
   &__container {
+
     display: flex;
-    flex-direction: column;
+    min-height: 120px;
     align-items: center;
     justify-content: center;
     cursor: pointer;
-    background-color: rgba(255, 255, 255, 0.3); // White cards for a clean look
+    background-color: #FFF
+    ; // White cards for a clean look
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); // Soft shadow for depth
     border-radius: 5px; // Rounded corners for a modern feel
     transition: box-shadow 0.3s ease; // Smooth shadow transition
@@ -45,6 +45,8 @@
     color: v.$secondary; // A corporate blue for icons
     font-size: 2rem; // Icon size kept large for visibility
     margin-bottom: 5px; // Space between icon and name
+    // filter: drop-shadow(2px 2px 1px rgba(0,0,0,0.1));
+
     @media screen and (mAX-width: 1023px) {
       font-size: 1.75rem; // Slightly smaller icons on mobile for balance
     }
@@ -58,5 +60,7 @@
     text-align: center;
     margin-top: 0; // Adjusted spacing
     font-size: 0.7em; // Small, legible font size
+    // filter: drop-shadow(2px 2px 1px rgba(0,0,0,0.1));
+
   }
 }

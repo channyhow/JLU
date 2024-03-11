@@ -8,12 +8,12 @@ function ResumeDownload() {
   return (
     <div
       className="resume"
-      style={{ display:'flex'}}
+      style={{ display: 'flex' }}
     >
       {' '}
       <SystemUpdateAltIcon>
         <a href={resumeUrl} download="My_Resume.pdf">
-          <h4 style={{color: '#e8c328'}}>Resume</h4>
+          <h4 style={{ color: '#e8c328' }}>Resume</h4>
         </a>
       </SystemUpdateAltIcon>
     </div>

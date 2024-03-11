@@ -2,36 +2,45 @@
 
 .data-card {
   // Default styles for larger screens
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   &__body {
-    text-align: left;
+    text-align: center;
     display: flex;
     flex-direction: row;
   }
 
-  &__modal,  &__details, &__title {
+  &__modal,
+  &__details,
+  &__title,
+  &__body {
     display: flex;
     flex-direction: column;
 
-    justify-content: flex-start; // Align content to the left
-    align-items: left;
+    justify-content: center;
+    align-items: center;
   }
 
   &__modal {
-padding: 1em;  
-display: flex;
-transition: opacity 0.2s;
-}
+    padding: 1em;
+    display: flex;
+    transition: opacity 0.2s;
+  }
   // Responsive styles for mobile devices
   // scale: 0.8;
-  
-  @media (mAX-width: 1023px) {
-    &__body {
-      text-align: center;
-      align-items: center; // Center align items    width: fit-content;
-      flex-direction: column;
-    }
 
-    &__modal, &__duration, &__details, &__title {
+  @media (max-width: 1023px) {
+    // &__body {
+    //   text-align: center;
+    //   align-items: center; // Center align items    width: fit-content;
+    //   flex-direction: column;
+    // }
+
+    &__modal,
+    &__duration,
+    &__details,
+    &__title {
       justify-content: center; // Center content
     }
 
@@ -40,9 +49,10 @@ transition: opacity 0.2s;
     }
 
     &__organization {
-font-size: 3em;    }
+      font-size: 3em;
+    }
   }
 }
 
-// If you're using flexbox to layout the .data-card elements, 
+// If you're using flexbox to layout the .data-card elements,
 // you might not need to adjust text-align, but it's included here for completeness

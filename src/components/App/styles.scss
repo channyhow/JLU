@@ -1,70 +1,89 @@
 @use "./../../styles/vars" as v;
 
 .app {
-  height: 100vh;
-  width: 100vw;
   display: flex;
-  flex-direction: column; // Stack children vertically
-  justify-content: center; // Center horizontally
-  overflow-y: hidden;
+  flex-direction: column;
+  justify-content: flex-start;
+  box-sizing: border-box;
+  // width: 100vw;
+  height: 100vh;
+  @media screen and (max-width: 1023px) {
 
-  &__mobile-header {
-    display: flex;
-    justify-content: space-between;
-    padding: 1em 0;
-    img {
-      height: auto; // Make sure the image height adjusts properly
-    }
   }
 
-  &__outer-container {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    padding: 0;
-    text-align: center;
-    height: 100vh;
-    // overflow-y: auto; // Add overflow-y to enable scrolling if content exceeds viewport height
+  &__mobile-header {
+    position: sticky;
+    top: 0;
+    width: 100vw;
+    z-index: 100;
+    background-color: #133955;
 
-    @media screen and (min-width: 1024px) {
-      padding: 0 2em;
-      text-align: left;
-      flex: 1;
-    }
   }
 
   &__inner-container {
-    display: flex;
-    width: 100%;
-    max-width: 1280px;
-    margin: 1em 0;
-    padding: 0 1em;
-    flex-direction: column; // Stack children vertically
-    // 450 so that can see work completely
-    height: 600px;
-    overflow-y: auto; // Add overflow-y to enable scrolling if content exceeds container height
+    // border: 3px solid blue;
+    // height: 100%; /* Full viewport height */
+    width: 100vw;
+    display: flex; /* Use flexbox to lay out sidebar and content side by side */
+    justify-content: space-between;
+  }
 
-    @media screen and (min-width: 1024px) {
-      flex-direction: row; // Align children horizontally
-      scale: 0.9;
-      margin: auto;
-      padding: 0;
-      height: 450px;
+  &__sidebar {
+    height: 100vh;
+    width: 400px;
+    // margin: 0 1em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    // border: 3px solid yellow;
+    background-color: #133955;
+  }
+
+  &__container {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    // border: 3px solid pink;
+    justify-content: space-between;
+    background-color: #F2F0EB;
+    @media screen and (max-width: 1023px) {
+      background-color: #133955;
+  color: white;
+  width: 100%;
     }
   }
 
-  &__routes {
-    flex: 1;
+  &__content {
+    // background-color: #FFFDFB;
+    // border: 3px solid green;
+    // padding: 5em 1em;
+    overflow: auto;
+    width: 70vw;
+    height: 100%;
+    margin: 3em 0;
+    display: flex;
+    flex-direction: column;
+    // justify-content: center;
+    align-items: center;
+    scale: 0.8;
+    @media screen and (max-width: 1023px) {
+      width: auto;
+      margin: 0;
+      scale:1;
+
+    }
+  
   }
 
   &__footer {
-    position: fixed;
-    bottom: 0;
-    flex-direction: column;
-    align-items: flex-end;
-    width: 100%;
     @media screen and (max-width: 1023px) {
-      align-items: center;
+ position: fixed;
+ bottom: 0;
+ background-color: #133955;
+ display: flex;
+ flex-direction: column-reverse;
+ width: 100VW;
+ padding: 1em 0 0.5em 0;
     }
   }
 }

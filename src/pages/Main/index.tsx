@@ -10,17 +10,20 @@ function Main() {
       transition={{ duration: 1 }}
       className="main"
     >
-      <h1
-        style={{
-          textTransform: 'uppercase',
-          paddingBottom: '0.5em',
-        }}
-      >
-        14 ans d&apos;expérience dans le tracking de la publicité digitale.
-      </h1>
-      <div>
+      <div className="container">
+        <h1
+          style={{
+            textTransform: 'uppercase',
+            paddingBottom: '0.5em',
+            filter: 'drop-shadow(2px 2px 1px rgba(0,0,0,0.1))',
+            fontWeight: '500',
+          }}
+        >
+          14 ans d&apos;expérience dans le tracking de la publicité digitale.
+        </h1>
         <SkillsComponent />
       </div>
+
     </motion.div>
   );
 }

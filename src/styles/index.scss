@@ -1,5 +1,5 @@
 @use "reset";
-@use "vars";
+@use "./../styles/vars" as v;
 
 /* Reset */
 * {
@@ -9,89 +9,122 @@
 }
 
 @font-face {
-  font-family: 'Antonio';
-  src: url('/public/fonts/Antonio/Antonio-VariableFont_wght.ttf') format('truetype');
+  font-family: "Antonio";
+  src: url("/public/fonts/Antonio/Antonio-VariableFont_wght.ttf")
+    format("truetype");
   font-weight: 600;
   font-style: normal;
 }
 
 @font-face {
-  font-family: 'Inter Light 300';
-  src: url('/public/fonts/Inter/Inter-Light.ttf') format('truetype');
+  font-family: "Inter Light 300";
+  src: url("/public/fonts/Inter/Inter-Light.ttf") format("truetype");
   font-weight: 300;
   font-style: light;
 }
 
 @font-face {
-  font-family: 'Inter Regular 400';
-  src: url('/public/fonts/Inter/Inter-Regular.ttf') format('truetype');
+  font-family: "Inter Regular 400";
+  src: url("/public/fonts/Inter/Inter-Regular.ttf") format("truetype");
   font-weight: 400;
   font-style: normal;
 }
 @font-face {
-  font-family: 'Anton';
-  src: url('/public/fonts/Anton/Anton-Regular.ttf') format('truetype');
+  font-family: "Anton";
+  src: url("/public/fonts/Anton/Anton-Regular.ttf") format("truetype");
   font-weight: 400;
   font-style: normal;
+}
+h2,
+h3,
+h4,
+h5 {
+  text-transform: uppercase;
+  letter-spacing: 2px;
 }
 
 h1 {
   font-size: 2.5em; /* 40px/16=2.5em */
-  font-family: 'Antonio';
-  font-weight: 600;
+  padding: 0.5em;
+  letter-spacing: 2px;
+  @media screen and (max-width: 1023px) {
+    font-size: 2em;
+  }
 }
 
 h2 {
   font-size: 1.875em; /* 30px/16=1.875em */
-  line-height: 1.5em;
-  // font-weight: 600;
+  padding: 1em;
+  @media screen and (max-width: 1023px) {
+    font-size: 1.5em;
+  }
 }
 
 h3 {
   font-size: 1.5em; /* 30px/16=1.875em */
+  @media screen and (max-width: 1023px) {
+    font-size: 1.2em;
+  }
 }
 
 h4 {
   font-size: 1.2em; /* 30px/16=1.875em */
-  font-family: 'EB Garamond';
+  padding: 0.5em;
+  @media screen and (max-width: 1023px) {
+    font-size: 1em;
+  }
+}
+
+h5 {
+  font-size: 1em; /* 30px/16=1.875em */
+  padding: 0.5em;
+  @media screen and (max-width: 1023px) {
+    font-size: 0.85em;
+  }
 }
 
 p {
   line-height: 1.5em;
-  font-size: 0.9em;
+  font-size: 1em;
+  @media screen and (max-width: 1023px) {
+    font-size: 0.85em;
+  }
 }
 
 a {
   text-decoration: none;
 }
 
-ul, ol, li {
+ul,
+ol,
+li {
   list-style: none;
 }
 
 span {
   font-weight: 600;
+  color: "#ad887c";
 }
 
 body {
   margin: 0;
   padding: 0;
-  // height: 100vh;
-font-family: 'Inter'; 
-background-color: #FAF7F6; // Apply background color to the body
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  color: black;
+  font-family: "Inter", sans-serif; // Added fallback font}
+  background-color: #fff;
+  box-sizing: border-box; /* Ensures padding does not add to the total width */
 }
 
 #root {
-  height: 100vh; // Ensure the root container covers the entire viewport height
   display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-html {
-  // height: 100%;
-  -webkit-text-size-adjust: 100%;
-  line-height: 1.15;
+  flex-direction: column; /* Stack children vertically */
+  justify-content: flex-start; /* Align content to the top */
+  align-items: center; /* Center content horizontally */
+  min-height: 100vh; /* Minimum height of the viewport */
+  width: 100%; /* Take up full width */
 }
 
 ::-webkit-scrollbar {
@@ -99,24 +132,61 @@ html {
 }
 
 :hover {
-transition: 0.2s;
+  transition: 0.4s;
 }
 
 button {
-  background-color: transparent; // Set the background color to transparent
-  border: none; // Remove border to make it look like a text link
-  padding: 0; // Remove any padding
-  margin: 0; // Remove any margin
-  cursor:pointer; // Add cursor pointer to indicate interactivity
-
+  background-color: transparent;
+  font-family: "Inter", sans-serif; // Added fallback font
+  // filter: drop-shadow(2px 2px 1px rgba(0,0,0,0.1));
+  font-weight: 400;
+  color: black;
+  cursor: pointer;
+  border: none;
   &:focus {
-    outline: none; // Remove default focus outline
+    outline: none;
   }
-  &:hover h1 {
-    color: #bf2a2a; // Change color on hover
-  }
+  &:hover {
+    // background-color: rgba(255, 255, 255, 0.2);
+    color: v.$accent;
 
-  &:active h1 {
-    color: #f91616; // Change color on click
+  }
+  &:active {
+    // background-color: rgba(255, 255, 255, 0.3);
+    color: v.$secondary;
+  }
+}
+
+.container {
+  max-width: 800px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 1em;
+  // scale: 0.8;
+// height: 80vh;
+
+  h4 {
+    color: v.$secondary;
+    filter: drop-shadow(2px 2px 1px rgba(0, 0, 0, 0.1));
+    padding: 1em 0 1.5em 0;
+    @media screen and (max-width: 1023px) {
+    }
+  }
+}
+
+.contact,
+.about,
+.experience,
+.main,
+.education {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-bottom: 0;
+  height: 80%;
+  @media screen and (max-width: 1023px) {
+    padding-bottom: 100px;
   }
 }

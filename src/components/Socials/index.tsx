@@ -2,11 +2,16 @@ import React, { useState } from 'react';
 import AlternateEmailIcon from '@mui/icons-material/AlternateEmail';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import SmartphoneIcon from '@mui/icons-material/Smartphone';
-import GitHubIcon from '@mui/icons-material/GitHub';
+// import GitHubIcon from '@mui/icons-material/GitHub';
 import InstagramIcon from '@mui/icons-material/Instagram';
 import './styles.scss';
 
-function Socials({ color, hoverColor }: { color?: string; hoverColor: string }) {
+function Socials({
+  color = '#133955',
+  hoverColor = '#D79FC7',
+  padding = '1em',
+  opacity = '1',
+}) {
   const [hoveredIndex, setHoveredIndex] = useState<string | null>(null);
 
   const handleMouseEnter = (href: string) => {
@@ -25,14 +30,17 @@ function Socials({ color, hoverColor }: { color?: string; hoverColor: string }) 
   ];
 
   return (
-    <ol className="socials">
+    <ol className="socials" style={{ padding }}>
       {socialIcons.map((social) => (
         <li
           key={social.href}
           style={{
-            padding: '0 1em',
+            padding,
             color: hoveredIndex === social.href ? hoverColor : color,
+            scale: '0.8',
             transition: 'color 0.2s', // Specify transition property
+            filter: 'drop-shadow(2px 2px 1px rgba(0,0,0,0.1))',
+            opacity,
           }}
           onMouseEnter={() => handleMouseEnter(social.href)}
           onMouseLeave={handleMouseLeave}

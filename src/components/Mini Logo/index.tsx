@@ -3,7 +3,7 @@ import { NavLink } from 'react-router-dom';
 import logo from '../../assets/JL LOGO_ROSE MINI.svg';
 import logoHover from '../../assets/JL LOGO_ROSE JAUNE MINI.svg';
 
-function MiniLogo({ scale }: { scale?: string }) {
+function MiniLogo({ width = '100px', padding = '1em 0' }) {
   const [currentLogo, setCurrentLogo] = useState(logo);
 
   const handleMouseEnter = () => setCurrentLogo(logoHover);
@@ -16,7 +16,7 @@ function MiniLogo({ scale }: { scale?: string }) {
         alt="Jean-Ludovic Albany Logo"
         onMouseEnter={handleMouseEnter}
         onMouseLeave={handleMouseLeave}
-        style={{ transform: `scale(${scale})`, filter: 'brightness(100%)' }} // Default color filter
+        style={{ width, padding, filter: 'drop-shadow(2px 2px 1px rgba(0,0,0,0.1))' }} // Default color filter
       />
     </NavLink>
   );

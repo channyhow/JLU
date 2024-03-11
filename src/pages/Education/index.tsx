@@ -1,4 +1,3 @@
-import React from 'react';
 import './styles.scss';
 import { motion } from 'framer-motion';
 import educationData from '../../utils/data/educationDate.json';
@@ -15,10 +14,11 @@ function Education() {
       transition={{ duration: 0.5 }} // Transition duration
       className="education"
     >
-      <h3>education</h3>
-      {/* <EducationCard education={educationData} /> */}
+      <div className="container">
+        <h4>education</h4>
+        <DataCard data={commonEducationData} />
+      </div>
 
-      <DataCard data={commonEducationData} />
     </motion.div>
   );
 }
