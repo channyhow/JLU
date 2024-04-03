@@ -67,12 +67,6 @@ function Skills() {
               className="skills__container"
               style={{ display: 'flex', width: '100%', alignItems: 'center' }}
             >
-              {/* { hoveredSkill === skill.name
-              && (
-              <div className="skills__icon-container"style={{ height:'5px' }}>
-                <div className="skills__icon" style={{ scale: '0.7' }}>{skill.icon}</div>
-              </div>
-              )} */}
               <p
                 className="skills__name"
                 style={{ color: hoveredSkill === skill.name ? '#e8c328' : '' }}
