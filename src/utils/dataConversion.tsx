@@ -1,6 +1,10 @@
 // src/utils/dataConversionUtils.ts
 
-import { IEducation, IExperience, EducationOrExperience, ICommonFields } from '../types';
+import {
+  IEducation,
+  IExperience,
+  ICommonFields,
+} from '../types';
 
 // Function to convert IEducation to ICommonFields (EducationOrExperience)
 export function convertEducationToCommonFields(
@@ -26,7 +30,9 @@ export function convertExperienceToCommonFields(
     id: exp.id,
     title: exp.position,
     organization: exp.company,
+    startMonth: exp.startMonth,
     startYear: exp.startYear,
+    endMonth: exp.endMonth,
     endYear: exp.endYear,
     details: exp.description,
     skills: exp.skills,

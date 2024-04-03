@@ -1,6 +1,5 @@
 // CookieConsent.tsx
 import React, { useState, useEffect } from 'react';
-// import '../../utils/@types';
 import './styles.scss';
 
 const GTM_ID = 'GTM-NJ3VJVF5'; // Your GTM container ID
@@ -10,7 +9,7 @@ function CookieConsent() {
 
   // Declare initializeGTM as a function expression at the top
   const initializeGTM = () => {
-    console.log('Initializing GTM');
+    // console.log('Initializing GTM');
     window.dataLayer = window.dataLayer || [];
     window.dataLayer.push({
       'gtm.start': new Date().getTime(),
@@ -31,7 +30,7 @@ function CookieConsent() {
   }, []);
 
   const handleAccept = () => {
-    console.log('Accept clicked');
+    // console.log('Accept clicked');
     setConsent(true);
     localStorage.setItem('cookieConsent', 'true');
     initializeGTM();
@@ -39,11 +38,11 @@ function CookieConsent() {
 
   // Debugging: Log the current state of 'consent'
   useEffect(() => {
-    console.log('Consent state changed:', consent);
+    // console.log('Consent state changed:', consent);
   }, [consent]);
 
   if (consent) {
-    console.log('Consent given, not rendering the consent banner');
+    // console.log('Consent given, not rendering the consent banner');
     return null; // If consent is given, don't show the banner
   }
 
@@ -51,12 +50,12 @@ function CookieConsent() {
     <div
       className="cookie-consent-banner"
     >
-      <h4 style={{ padding: '1em' }}>
+      <p style={{ padding: '1em' }}>
         Nous utilisons des cookies pour améliorer votre expérience.
         <br />
         En continuant à utiliser notre site, vous acceptez notre utilisation des
         cookies.
-      </h4>
+      </p>
 
       <button
         style={{ background: 'black', color: 'white', padding: '0.5em 1em' }}

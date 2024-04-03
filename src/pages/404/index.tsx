@@ -2,8 +2,10 @@ import React from 'react';
 import './styles.scss';
 import { motion } from 'framer-motion';
 import { NavLink } from 'react-router-dom';
+import Container from '../../components/Container';
+import Section from '../../components/Section';
 
-function NotFound() {
+export default function NotFound() {
   return (
     <motion.div
       initial={{ scale: 0.8, opacity: 0 }}
@@ -12,34 +14,38 @@ function NotFound() {
       style={{ scale: '0.8' }}
       className="not-found"
     >
-      <div className="container">
-        <h4
-          className="not-found__title"
-        >
-          Oops !
-        </h4>
-        <p className="not-found__description">
-          On dirait que vous êtes perdu.
-          {' '}
-          <br />
-          La page que vous cherchez n&rsquo;est pas disponible.
-        </p>
-        <NavLink to="/home" className="not-found__home-link">
-          <motion.button
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.95 }}
-            transition={{ duration: 0.2 }}
-            style={{
-              background: 'black', color: 'white', padding: '0.5em 1em', borderRadius: '0px',
-            }}
+      <Section backgroundColor="" color="" display="flex" flexDirection="row" justifyContent="flex-end" alignItems="center" padding="" margin="">
+        <Container backgroundColor="" color="" display="flex" flexDirection="column" justifyContent="flex-start" alignItems="flex-end" padding="40px 0" width="60%">
+          <h3
+            className="not-found__title"
+            style={{ paddingBottom: '1em ' }}
           >
-            <h4>Ramenez-moi à l&rsquo;accueil</h4>
-          </motion.button>
-        </NavLink>
-      </div>
+            Oopsie Daisy !
+          </h3>
+          <p
+            className="not-found__description"
+            style={{ paddingBottom: '1em ' }}
 
+          >
+            On dirait que vous êtes perdu.
+            {' '}
+            <br />
+            La page que vous cherchez n&rsquo;est pas disponible.
+          </p>
+          <NavLink to="/" className="not-found__home-link">
+            <motion.button
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+              transition={{ duration: 0.2 }}
+              style={{
+                border: '1px solid black', color: 'black', padding: '0.5em 1em', borderRadius: '0px', whiteSpace: 'nowrap', backgroundColor: 'transparent',
+              }}
+            >
+              <h5>Ramenez-moi à l&rsquo;accueil</h5>
+            </motion.button>
+          </NavLink>
+        </Container>
+      </Section>
     </motion.div>
   );
 }
-
-export default NotFound;

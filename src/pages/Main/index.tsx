@@ -1,8 +1,13 @@
 import './styles.scss';
 import { motion } from 'framer-motion';
+import useMediaQuery from '@mui/material/useMediaQuery';
 import SkillsComponent from '../../components/Skills';
+import Container from '../../components/Container';
+import Section from '../../components/Section';
 
 function Main() {
+  const isMobile = useMediaQuery('(max-width: 1023px)');
+
   return (
     <motion.div
       initial={{ opacity: 0, y: 0 }}
@@ -10,20 +15,23 @@ function Main() {
       transition={{ duration: 1 }}
       className="main"
     >
-      <div className="container">
-        <h1
-          style={{
-            textTransform: 'uppercase',
-            paddingBottom: '0.5em',
-            filter: 'drop-shadow(2px 2px 1px rgba(0,0,0,0.1))',
-            fontWeight: '500',
-          }}
-        >
-          14 ans d&apos;expérience dans le tracking de la publicité digitale.
-        </h1>
-        <SkillsComponent />
-      </div>
-
+      <Section backgroundColor="" color="" display="flex" flexDirection="row" justifyContent="flex-end" alignItems="flex-end" padding="" margin="">
+        <Container backgroundColor="" color="" display="flex" flexDirection="column" justifyContent="" alignItems="flex-end" padding={isMobile ? '' : '200px 0 40px 0'} width={isMobile ? '80%' : '60%'}>
+          <h1
+            style={{
+              paddingBottom: '1em',
+              fontWeight: '600',
+              fontFamily: 'Inter',
+              textAlign: 'right',
+            }}
+          >
+            14 ans d&apos;expérience dans le tracking de la
+            {' '}
+            <span style={{ color: '#CDCFC8' }}>publicité digitale.</span>
+          </h1>
+          <SkillsComponent />
+        </Container>
+      </Section>
     </motion.div>
   );
 }

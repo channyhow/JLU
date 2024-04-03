@@ -1,20 +1,12 @@
 @use "./../../styles/vars" as v;
 
 .copyright {
-  padding: 1em;
+  padding: 1em 0 0;
   font-size: 0.8em;
-  color: #e0d3cf;
-  text-align: right;
-  span{
-      font-family: 'EB Garamond';
-      color: #D79FC7;
-  }
+  color: #CDCFC8;
 
   // for mobile
   @media screen and (max-width: 1023px) {
-    padding: 0.5em;
-    color: #268770;
-    // opacity: 0.6;
-    text-align: center;
+
   }
 }

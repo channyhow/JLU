@@ -105,8 +105,13 @@ function ContactForm() {
           rows={4}
           style={{ marginBottom: '1em', backgroundColor: 'rgb(255, 255, 255, 0.1)', borderRadius: '5px' }}
         />
-        <Button type="submit" style={{ margin: '1em', backgroundColor: isMobile ? 'rgb(255, 255, 255, 0.4)' : 'rgb(255, 255, 255, 0.6)', color: '#e8c328' }}>
-          Submit
+        <Button
+          type="submit"
+          style={{
+            margin: '1em', border: '1px solid black', color: 'black', padding: '0.5em 1em', borderRadius: '0px', whiteSpace: 'nowrap', backgroundColor: 'transparent',
+          }}
+        >
+          <h5>Envoyer</h5>
         </Button>
       </form>
 
@@ -123,10 +128,12 @@ function ContactForm() {
         <DialogActions>
           <Button
             onClick={handleCloseErrorDialog}
-            style={{ margin: '1em', backgroundColor: isMobile ? 'rgb(255, 255, 255, 0.4)' : 'rgb(255, 255, 255, 0.6)', color: '#e8c328' }}
+            style={{
+              margin: '1em', border: '1px solid black', color: 'black', padding: '0.5em 1em', borderRadius: '0px', whiteSpace: 'nowrap', backgroundColor: 'transparent',
+            }}
           >
 
-            OK
+            <h5>OK</h5>
           </Button>
         </DialogActions>
       </Dialog>

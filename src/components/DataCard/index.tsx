@@ -1,67 +1,79 @@
 import React, { useState } from 'react';
 import './styles.scss';
-import { useMediaQuery } from '@mui/material';
-import { CardProps } from '../../types';
+import { motion } from 'framer-motion';
+import { CardProps, ICommonFields } from '../../types';
 
 function DataCard({ data }: CardProps) {
-  const [hoveredIndex, setHoveredIndex] = useState<string | null>(null);
-  // Removed the clickedIndex state as it's no longer needed for hover functionality
-  const isMobile = useMediaQuery('(max-width:1023px)');
+  const [visibleYear, setVisibleYear] = useState<string | null>(null);
 
-  const handleMouseEnter = (id: string) => setHoveredIndex(id);
-  const handleMouseLeave = () => setHoveredIndex(null);
-  // Removed handleDataClick as it's no longer needed for hover functionality
+  // Aggregate data by start year
+  const dataByYear = data.reduce((acc: { [key: string]: ICommonFields[] }, item: ICommonFields) => {
+    const { startYear } = item;
+    if (!acc[startYear]) {
+      acc[startYear] = [];
+    }
+    acc[startYear].push(item);
+    return acc;
+  }, {});
+
+  // Toggle visibility of experiences by year
+  const handleYearClick = (year: string) => {
+    setVisibleYear((prevYear) => (prevYear === year ? null : year));
+  };
 
   return (
-    <div className="data-card">
-      {data.map((entry, index) => (
-        <div
-          key={entry.id}
-          className="data-card__body"
-          onMouseEnter={() => handleMouseEnter(entry.id)}
-          onMouseLeave={handleMouseLeave}
+
+    <ul style={{ listStyle: 'none', width: '60%', padding: '40px 0' }}>
+      {Object.entries(dataByYear).map(([year, items], index) => (
+        <li
+          key={year}
+          style={{
+            borderTop: index === 0 ? 'none' : '1px solid #CDCFC8',
+            textAlign: 'right',
+            padding: '1em 0',
+          }}
         >
-          <button type="button">
-            <span
-              className="data-card__organization"
-              style={{
-                textTransform: index % 3 === 1 ? 'none' : 'uppercase',
-                opacity: index % 5 === 1 ? '0.8' : '1',
-                fontFamily: index % 3 === 1 ? 'EB Garamond' : 'Antonio',
-                fontSize: '3em',
-                cursor: 'pointer',
-                transition: 'opacity 0.5s',
-                color: hoveredIndex === entry.id ? '#D79FC7' : isMobile ? 'white' : 'black',
-              }}
-            >
-              {entry.organization}
-            </span>
+          <button
+            type="button"
+            onClick={() => handleYearClick(year)}
+            style={{
+              cursor: 'pointer', background: 'none', border: 'none', padding: 0, color: '', textAlign: 'left', width: '100%',
+            }}
+          >
+            <h3 style={{ textAlign: 'right' }}>
+              {year}
+            </h3>
           </button>
+          {visibleYear === year && (
+          <motion.div
+            initial={{ opacity: 0, y: 0 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 1 }}
+            className="data-details"
 
-          {/* Show modal when hoveredIndex matches entry.id */}
-          {hoveredIndex === entry.id && (
-          <div className="data-card__modal">
-            {' '}
-            <h5 style={{ fontWeight: '500' }}>{entry.title}</h5>
-
-            <div
-              className="data-card__duration"
-              style={{
-                display: 'flex',
-                paddingRight: '0.5em',
-                color: '#E8C328',
-              }}
-            >
-              <p className="data-card__year" style={{ paddingRight: '0.5em' }}>
-                {entry.endYear}
-              </p>
-              <p className="data-card__year">{entry.startYear}</p>
-            </div>
-          </div>
+          >
+            {items.map((item) => (
+              <li
+                key={item.id}
+                style={{
+                  padding: '0.5em 0', whiteSpace: 'nowrap', textAlign: 'right', display: 'flex', alignItems: 'flex-end', flexDirection: 'column',
+                }}
+              >
+                <h5 style={{ paddingBottom: '0.5em', fontWeight: '500' }}>
+                  {' '}
+                  {item.organization}
+                </h5>
+                <p style={{ whiteSpace: 'normal' }}>
+                  {' '}
+                  {item.title}
+                </p>
+              </li>
+            ))}
+          </motion.div>
           )}
-        </div>
+        </li>
       ))}
-    </div>
+    </ul>
   );
 }
 

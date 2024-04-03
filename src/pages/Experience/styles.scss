@@ -1,2 +1,7 @@
 @use "./../../styles/vars" as v;
 
+.experience {
+  &__title {
+    padding: 1em 0;
+  }
+}

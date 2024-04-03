@@ -30,7 +30,7 @@ function Socials({
   ];
 
   return (
-    <ol className="socials" style={{ padding }}>
+    <ol className="socials">
       {socialIcons.map((social) => (
         <li
           key={social.href}
@@ -39,7 +39,7 @@ function Socials({
             color: hoveredIndex === social.href ? hoverColor : color,
             scale: '0.8',
             transition: 'color 0.2s', // Specify transition property
-            filter: 'drop-shadow(2px 2px 1px rgba(0,0,0,0.1))',
+            // filter: 'drop-shadow(2px 2px 1px rgba(0,0,0,0.1))',
             opacity,
           }}
           onMouseEnter={() => handleMouseEnter(social.href)}

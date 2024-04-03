@@ -1,39 +1,19 @@
 import React from 'react';
 import './styles.scss';
+import { Link } from 'react-router-dom';
 
 function Copyright() {
   return (
     <div className="copyright">
-      <p className="copyright__body">
-        ©2024 -
-        {' '}
-        <a
-          href="https://channyhow.com/"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <span>channy how.</span>
-        </a>
 
-        {' '}
-        {' '}
-        {/* Coded with ♡ in
-        {' '}
-        <span>Vite.js</span>
-        {' '}
+      <Link
+        to="https://channyhow.com/"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        <h5>channy how ©2024 </h5>
+      </Link>
 
-        <span>React</span>
-        {' '}
-        {' '}
-        and
-        {' '}
-        {' '}
-        <span> Scss</span>
-        , deployed with
-        {' '}
-        <span>Netlify</span> */}
-
-      </p>
     </div>
   );
 }

@@ -1,13 +1,12 @@
 import * as React from 'react';
 import Box from '@mui/material/Box';
 import SwipeableDrawer from '@mui/material/SwipeableDrawer';
-import Button from '@mui/material/Button';
-import AlignVerticalCenterIcon from '@mui/icons-material/AlignVerticalCenter';
 import { useState } from 'react';
+import { useMediaQuery } from '@mui/material';
+import MenuIcon from '@mui/icons-material/Menu';
 import Logo from '../Logo';
 import Socials from '../Socials';
 import Navigation from '../Navigation';
-import MiniLogo from '../Mini Logo';
 
 type Anchor = 'menu';
 
@@ -15,6 +14,7 @@ export default function SwipeableTemporaryDrawer() {
   const [state, setState] = useState({
     menu: false,
   });
+  const isMobile = useMediaQuery('(max-width: 767px)');
 
   const toggleDrawer = (anchor: Anchor, open: boolean) => (event: React.KeyboardEvent | React.MouseEvent) => {
     if (
@@ -30,7 +30,7 @@ export default function SwipeableTemporaryDrawer() {
 
   const list = (anchor: Anchor) => (
     <SwipeableDrawer
-      anchor="left"
+      anchor={isMobile ? 'top' : 'left'}
       open={state.menu}
       onClose={toggleDrawer('menu', false)}
       onOpen={toggleDrawer('menu', true)}
@@ -39,41 +39,85 @@ export default function SwipeableTemporaryDrawer() {
         sx={{
           display: 'flex',
           flexDirection: 'column',
-          justifyContent: 'space-evenly', // Center items vertically
-          height: '100%',
-          width: '80vw',
-          backgroundColor: '#133955 ',
+          justifyContent: 'space-between',
+          height: '100vh',
+          width: '100%',
+          backgroundColor: ' ',
           padding: '2em',
+          borderRight: isMobile ? '' : '1px solid black',
+          borderBottom: isMobile ? '1px solid black' : '',
+          alignItems: 'flex-start',
         }}
         role="presentation"
         onClick={toggleDrawer(anchor, false)}
         onKeyDown={toggleDrawer(anchor, false)}
       >
-        <div>
-          <MiniLogo />
-
-          <Navigation color="#e8c328" hoverColor="#268770" />
-          <Socials color="#e5d9d5" hoverColor="#268770" />
-
+        <div
+          style={{
+            display: 'flex',
+            justifyContent: 'space-between',
+            alignItems: 'baseline',
+            width: isMobile ? '' : '100%',
+            flexDirection: isMobile ? 'column' : 'row',
+          }}
+        >
+          <Logo
+            width=""
+            padding=""
+            filter="drop-shadow(2px 2px 1px rgba(0,0,0,0.1))"
+            displayStyle="long"
+          />
+          <p style={{
+            padding: isMobile ? '14px 0' : '0 14px', fontWeight: '500', color: '#e8c328',
+          }}
+          >
+            Expert en tracking digital
+            {' '}
+          </p>
         </div>
+        <Navigation color="black" hoverColor="#e8c328" />
+        <Socials color="black" hoverColor="#e8c328" />
       </Box>
     </SwipeableDrawer>
   );
 
   return (
-    <div style={{ padding: '1em ', width: '100%' }}>
-      <div style={{ display: 'flex', justifyContent: 'space-between' }}>
-        {' '}
-        <Button onClick={toggleDrawer('menu', true)}>
-          <AlignVerticalCenterIcon
-            sx={{
-              color: '#e8c328',
-            }}
-          />
-        </Button>
-        {list('menu')}
-        <Logo width="150px" padding="1em" filter="drop-shadow(2px 2px 1px rgba(0,0,0,0.1))" />
-      </div>
+
+    <div
+      style={{
+        display: 'flex',
+        flexDirection: isMobile ? 'row' : 'column',
+        justifyContent: 'space-between',
+        height: isMobile ? '' : '100%',
+        width: isMobile ? '100%' : '',
+        alignItems: 'center',
+        padding: isMobile ? '14px' : '0 14px',
+        borderRight: isMobile ? '' : '1px solid black',
+        borderBottom: isMobile ? '1px solid black' : '',
+
+      }}
+    >
+      {' '}
+      <button onClick={toggleDrawer('menu', true)} type="button">
+        <Logo
+          width=""
+          padding={isMobile ? '' : '40px 0'}
+          filter="drop-shadow(2px 2px 1px rgba(0,0,0,0.1))"
+          displayStyle={isMobile ? 'long' : 'short'}
+        />
+      </button>
+      {isMobile ? (
+        <button onClick={toggleDrawer('menu', true)} type="button">
+          <MenuIcon />
+        </button>
+
+      ) : (
+        <button onClick={toggleDrawer('menu', true)} type="button">
+          <h4 style={{ padding: isMobile ? '30px 0' : '40px 0' }}>Menu</h4>
+        </button>
+      )}
+
+      {list('menu')}
     </div>
   );
 }

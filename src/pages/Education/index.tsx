@@ -3,6 +3,8 @@ import { motion } from 'framer-motion';
 import educationData from '../../utils/data/educationDate.json';
 import DataCard from '../../components/DataCard';
 import { convertEducationToCommonFields } from '../../utils/dataConversion';
+import Container from '../../components/Container';
+import Section from '../../components/Section';
 
 function Education() {
   // Convert the experience data to the common fields format
@@ -14,11 +16,12 @@ function Education() {
       transition={{ duration: 0.5 }} // Transition duration
       className="education"
     >
-      <div className="container">
-        <h4>education</h4>
-        <DataCard data={commonEducationData} />
-      </div>
-
+      <Section backgroundColor="" color="" display="flex" flexDirection="row" justifyContent="flex-end" alignItems="" padding="" margin="">
+        <Container backgroundColor="" color="" display="flex" flexDirection="column" justifyContent="flex-start" alignItems="flex-end" padding="" width="60%">
+          <h4 className="education__title">education</h4>
+          <DataCard data={commonEducationData} />
+        </Container>
+      </Section>
     </motion.div>
   );
 }

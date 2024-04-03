@@ -1,33 +1,26 @@
-import React, { useState, useEffect } from 'react';
+/* eslint-disable react/require-default-props */
+import React from 'react';
 import { NavLink } from 'react-router-dom';
-import { useMediaQuery } from '@mui/material';
-import logo from '../../assets/JL LOGO_150 BLANC.svg';
-import logoHover from '../../assets/JL LOGO_150 JAUNE NOIR.svg';
-import logoRose from '../../assets/JL LOGO_150 ROSE.svg';
-// Assuming you have logoRoseHover ready to be used
-// import logoRoseHover from '../../assets/JL LOGO_150 ROSE JAUNE.svg';
 
-function Logo({ width = '150px', padding = '0', filter = 'none' }) {
-  const isMobile = useMediaQuery('(max-width: 1023px)');
-  const [currentLogo, setCurrentLogo] = useState(logo);
+interface LogoProps {
+  displayStyle: 'short' | 'long';
+  padding?: string;
+  width?: string;
+  filter?: string;
+}
 
-  // Update the logo based on the screen size
-  useEffect(() => {
-    setCurrentLogo(isMobile ? logoRose : logo);
-  }, [isMobile]);
-
-  const handleMouseEnter = () => setCurrentLogo(isMobile ? logoRose : logoHover);
-  const handleMouseLeave = () => setCurrentLogo(isMobile ? logoRose : logo);
+function Logo({
+  displayStyle,
+  padding,
+  width,
+  filter,
+}: LogoProps) {
+  // Determine logo text based on the displayStyle prop
+  const logoText = displayStyle === 'short' ? 'JLA' : 'JLALBANY';
 
   return (
-    <NavLink to="/">
-      <img
-        src={currentLogo}
-        alt="Jean-Ludovic Albany Logo"
-        onMouseEnter={handleMouseEnter}
-        onMouseLeave={handleMouseLeave}
-        style={{ width, padding, filter }}
-      />
+    <NavLink to="/" style={{ filter }}>
+      <h1 style={{ padding, width, fontFamily: 'Anton' }}>{logoText}</h1>
     </NavLink>
   );
 }

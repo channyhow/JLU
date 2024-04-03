@@ -2,6 +2,8 @@ import React from 'react';
 import './styles.scss';
 import { motion } from 'framer-motion';
 import ContactForm from '../../components/ContactForm';
+import Container from '../../components/Container';
+import Section from '../../components/Section';
 // import ResumeDownload from '../../components/ResumeDownload';
 
 function Contact() {
@@ -12,15 +14,17 @@ function Contact() {
       transition={{ duration: 0.5 }} // Transition duration
       className="contact"
     >
-      <div className="container">
-        <h4
-          className="contact__title"
-        >
-          contact
-        </h4>
-        <ContactForm />
-      </div>
-
+      <Section backgroundColor="" color="" display="flex" flexDirection="row" justifyContent="flex-end" alignItems="" padding="" margin="">
+        <Container backgroundColor="" color="" display="flex" flexDirection="column" justifyContent="flex-start" alignItems="flex-end" padding="" width="60%">
+          {' '}
+          <h4
+            className="contact__title"
+          >
+            contact
+          </h4>
+          <ContactForm />
+        </Container>
+      </Section>
     </motion.div>
   );
 }

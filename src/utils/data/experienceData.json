@@ -1,182 +1,222 @@
 [
-  {
+    {
       "id": "0",
-      "startYear": "juin 2022",
+      "startMonth": "juin",
+      "startYear": "2022",
+      "endMonth": "",
       "endYear": "aujourd’hui",
       "company": "AXA",
       "position": "Digital Media Tracking Expert",
       "location": "Paris, IDF, France",
       "skills": ["Web Analytics", "Online Campaign Management", "Advertising Operations"]
-  },
-  {
+    },
+    {
       "id": "1",
-      "startYear": "février 2016",
+      "startMonth": "février",
+      "startYear": "2016",
+      "endMonth": "",
       "endYear": "aujourd’hui",
       "company": "Ontrust",
       "position": "Digital Media Consultant",
       "location": "Paris, IDF, France",
       "skills": ["Online Campaign Management", "Advertising Operations", "Web Analytics"]
-  },
-  {
+    },
+    {
       "id": "2",
-      "startYear": "juillet 2017",
-      "endYear": "mai 2022",
+      "startMonth": "juillet",
+      "startYear": "2017",
+      "endMonth": "mai",
+      "endYear": "2022",
       "company": "Le 10 Sport",
       "position": "Campaign Manager",
       "location": "Paris, IDF, France",
       "skills": ["Web Analytics", "Online Campaign Management", "Advertising Operations", "Google Ad Manager"]
-  },
-  {
+    },
+    {
       "id": "3",
-      "startYear": "novembre 2021",
-      "endYear": "janvier 2022",
+      "startMonth": "novembre",
+      "startYear": "2021",
+      "endMonth": "janvier",
+      "endYear": "2022",
       "company": "Mindshare",
       "position": "Ad Operations",
       "location": "Paris, IDF, France",
       "skills": []
-  },
-  {
+    },
+    {
       "id": "4",
-      "startYear": "octobre 2020",
-      "endYear": "mai 2021",
+      "startMonth": "octobre",
+      "startYear": "2020",
+      "endMonth": "mai",
+      "endYear": "2021",
       "company": "Mediabrands",
       "position": "Head of Data & Tech",
       "location": "Paris, IDF, France",
       "skills": []
-  },
-  {
+    },
+    {
       "id": "5",
-      "startYear": "novembre 2019",
-      "endYear": "février 2020",
+      "startMonth": "novembre",
+      "startYear": "2019",
+      "endMonth": "février",
+      "endYear": "2020",
       "company": "Artefact",
       "position": "Ad Operations",
       "location": "Paris, IDF, France",
       "skills": []
-  },
-  {
-      "id": "6",
-      "startYear": "mai 2018",
-      "endYear": "septembre 2018",
-      "company": "KR Wavemaker",
-      "position": "Ad Operations",
-      "location": "Paris, IDF, France",
-      "skills": []
-  },
-  {
-      "id": "7",
-      "startYear": "janvier 2018",
-      "endYear": "mars 2018",
-      "company": "MediaCom",
-      "position": "Ad Operations",
-      "location": "Paris, IDF, France",
-      "skills": []
-  },
-  {
-      "id": "8",
-      "startYear": "octobre 2017",
-      "endYear": "décembre 2017",
-      "company": "IPG Mediabrands",
-      "position": "Ad Operations",
-      "location": "Paris, IDF, France",
-      "skills": []
-  },
-  {
-      "id": "9",
-      "startYear": "avril 2017",
-      "endYear": "septembre 2017",
-      "company": "KR Media",
-      "position": "Ad Operations",
-      "location": "Paris, IDF, France",
-      "skills": []
-  },
-  {
-      "id": "10",
-      "startYear": "mars 2017",
-      "endYear": "septembre 2017",
-      "company": "NetMediaEurope",
-      "position": "Ad Operations",
-      "location": "Paris, IDF, France",
-      "skills": []
-  },
-  {
-      "id": "11",
-      "startYear": "février 2016",
-      "endYear": "septembre 2016",
-      "company": "AXA",
-      "position": "Digital Media Tracking Expert",
-      "location": "Paris, IDF, France",
-      "skills": []
-  },
-  {
-      "id": "12",
-      "startYear": "novembre 2015",
-      "endYear": "janvier 2016",
-      "company": "Ratecard / Adnovia",
-      "position": "Ad Operations",
-      "location": "Paris, IDF, France",
-      "skills": []
-  },
-  {
-      "id": "13",
-      "startYear": "octobre 2013",
-      "endYear": "avril 2015",
-      "company": "MEC",
-      "position": "Data & Trafic Management",
-      "location": "Paris, IDF, France",
-      "skills": []
-  },
-  {
-      "id": "14",
-      "startYear": "avril 2013",
-      "endYear": "août 2013",
-      "company": "Voyages-sncf.com",
-      "position": "Senior Traffic Manager",
-      "location": "Paris, IDF, France",
-      "skills": []
-  },
-  {
-      "id": "15",
-      "startYear": "2012",
-      "endYear": "Moins d’un an",
-      "company": "Starcom MediaVest",
-      "position": "Responsable Online Campaign Management",
-      "location": "Paris, IDF, France",
-      "skills": []
-  },
-  {
-      "id": "16",
-      "startYear": "2010",
-      "endYear": "2012",
-      "company": "My Media",
-      "position": "Traffic Manager",
-      "location": "Paris, IDF, France",
-      "skills": []
-  },
-  {
-      "id": "17",
-      "startYear": "2009",
-      "endYear": "2010",
-      "company": "Microsoft",
-      "position": "House Ads Campaign Manager",
-      "location": "Paris, IDF, France",
-      "skills": []
-  },
-  {
-      "id": "18",
-      "startYear": "2008",
-      "endYear": "2009",
-      "company": "Isobar",
-      "position": "Chef de projets tracking & data management",
-      "location": "Paris, IDF, France",
-      "skills": []
-  },
-  {
-      "id": "19",
-      "startYear": "2004",
-      "endYear": "2007",
-      "company": "Pictogramm",
-      "position": "Responsable de la communication et de la production",
-      "location": "Paris, IDF, France",
-      "skills": []
-  }
+    },
+    {
+        "id": "6",
+        "startMonth": "mai",
+        "startYear": "2018",
+        "endMonth": "septembre",
+        "endYear": "2018",
+        "company": "KR Wavemaker",
+        "position": "Ad Operations",
+        "location": "Paris, IDF, France",
+        "skills": []
+      },
+      {
+        "id": "7",
+        "startMonth": "janvier",
+        "startYear": "2018",
+        "endMonth": "mars",
+        "endYear": "2018",
+        "company": "MediaCom",
+        "position": "Ad Operations",
+        "location": "Paris, IDF, France",
+        "skills": []
+      },
+      {
+        "id": "8",
+        "startMonth": "octobre",
+        "startYear": "2017",
+        "endMonth": "décembre",
+        "endYear": "2017",
+        "company": "IPG Mediabrands",
+        "position": "Ad Operations",
+        "location": "Paris, IDF, France",
+        "skills": []
+      },
+      {
+        "id": "9",
+        "startMonth": "avril",
+        "startYear": "2017",
+        "endMonth": "septembre",
+        "endYear": "2017",
+        "company": "KR Media",
+        "position": "Ad Operations",
+        "location": "Paris, IDF, France",
+        "skills": []
+      },
+      {
+        "id": "10",
+        "startMonth": "mars",
+        "startYear": "2017",
+        "endMonth": "septembre",
+        "endYear": "2017",
+        "company": "NetMediaEurope",
+        "position": "Ad Operations",
+        "location": "Paris, IDF, France",
+        "skills": []
+      },
+      {
+        "id": "11",
+        "startMonth": "février",
+        "startYear": "2016",
+        "endMonth": "septembre",
+        "endYear": "2016",
+        "company": "AXA",
+        "position": "Digital Media Tracking Expert",
+        "location": "Paris, IDF, France",
+        "skills": []
+      },
+      {
+        "id": "12",
+        "startMonth": "novembre",
+        "startYear": "2015",
+        "endMonth": "janvier",
+        "endYear": "2016",
+        "company": "Ratecard / Adnovia",
+        "position": "Ad Operations",
+        "location": "Paris, IDF, France",
+        "skills": []
+      },
+      {
+        "id": "13",
+        "startMonth": "octobre",
+        "startYear": "2013",
+        "endMonth": "avril",
+        "endYear": "2015",
+        "company": "MEC",
+        "position": "Data & Trafic Management",
+        "location": "Paris, IDF, France",
+        "skills": []
+      },
+      {
+        "id": "14",
+        "startMonth": "avril",
+        "startYear": "2013",
+        "endMonth": "août",
+        "endYear": "2013",
+        "company": "Voyages-sncf.com",
+        "position": "Senior Traffic Manager",
+        "location": "Paris, IDF, France",
+        "skills": []
+      },
+      {
+        "id": "15",
+        "startYear": "2012",
+        "startMonth": "",
+        "endYear": "Moins d’un an",
+        "endMonth": "",
+        "company": "Starcom MediaVest",
+        "position": "Responsable Online Campaign Management",
+        "location": "Paris, IDF, France",
+        "skills": []
+      },
+      {
+        "id": "16",
+        "startYear": "2010",
+        "startMonth": "",
+        "endYear": "2012",
+        "endMonth": "",
+        "company": "My Media",
+        "position": "Traffic Manager",
+        "location": "Paris, IDF, France",
+        "skills": []
+      },
+      {
+        "id": "17",
+        "startYear": "2009",
+        "startMonth": "",
+        "endYear": "2010",
+        "endMonth": "",
+        "company": "Microsoft",
+        "position": "House Ads Campaign Manager",
+        "location": "Paris, IDF, France",
+        "skills": []
+      },
+      {
+        "id": "18",
+        "startMonth": "",
+        "startYear": "2008",
+        "endMonth": "",
+        "endYear": "2009",
+        "company": "Isobar",
+        "position": "Chef de projets tracking & data management",
+        "location": "Paris, IDF, France",
+        "skills": []
+      },
+      {
+        "id": "19",
+        "startMonth": "",
+        "startYear": "2004",
+        "endMonth": "",
+        "endYear": "2007",
+        "company": "Pictogramm",
+        "position": "Responsable de la communication et de la production",
+        "location": "Paris, IDF, France",
+        "skills": []
+      }
 ]
