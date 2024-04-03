@@ -1,6 +1,5 @@
 import React from 'react';
 import { Routes, Route } from 'react-router-dom';
-// import { useMediaQuery } from '@mui/material';
 import Main from '../../pages/Main';
 import About from '../../pages/About';
 import Education from '../../pages/Education';
@@ -15,7 +14,6 @@ import './styles.scss';
 import PinSpacer from '../PinSpacer';
 import CookieConsent from '../CookieConsent';
 import Copyright from '../Copyright';
-// import Header from '../Header';
 
 function App() {
   // const isMobile = useMediaQuery('(max-width: 1023px)');

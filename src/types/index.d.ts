@@ -35,17 +35,7 @@ export interface IExperience {
 }
 
 export interface ICommonFields {
-  // name: ReactNode;
-  // id: string;
-  // title: string; // For education, this could be the degree; for experience, the job title
-  // organization: string; // For education, this could be the school; for experience, the company name
-  // name?: string;
-  // startMonth?: string; // Optional since some entries might not have it
-  // startYear: string;
-  // endMonth?: string; // Optional for the same reason
-  // endYear: string;
-  // details?: string; // A field for additional details or description
-  // skills?: string[];
+
   id: string;
   organization: string; // Name of the organization or company
   title: string; // Position or degree title

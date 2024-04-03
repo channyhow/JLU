@@ -4,7 +4,6 @@ import { motion } from 'framer-motion';
 import ContactForm from '../../components/ContactForm';
 import Container from '../../components/Container';
 import Section from '../../components/Section';
-// import ResumeDownload from '../../components/ResumeDownload';
 
 function Contact() {
   return (
