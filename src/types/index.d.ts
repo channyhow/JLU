@@ -75,15 +75,3 @@ export interface Window {
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   dataLayer: any[];
 }
-
-// export interface DataEntry {
-//   id: string;
-//   startMonth?: string; // Optional since some entries might not have it
-//   startYear: string;
-//   endMonth?: string; // Optional for the same reason
-//   endYear: string;
-//   company: string;
-//   position: string;
-//   location: string;
-//   skills: string[]; // Assuming skills is an array of strings
-// }
