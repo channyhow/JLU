@@ -9,7 +9,7 @@ export interface IEducation {
   id: string;
   startMonth?: string; // Optional since some entries might not have it
   startYear: string;
-  endMonth?: string; // Optional for the same reason  
+  endMonth?: string; // Optional for the same reason
   endYear: string;
   school: string;
   nickname?: string;
@@ -23,7 +23,7 @@ export interface IExperience {
   id: string;
   startMonth?: string; // Optional since some entries might not have it
   startYear: string;
-  endMonth?: string; // Optional for the same reason  
+  endMonth?: string; // Optional for the same reason
   endYear: string;
   company: string;
   nickname?: string;
@@ -57,7 +57,6 @@ export interface ICommonFields {
   endYear?: string; // Optional: Year the position or degree ended
   details?: string; // Optional: Description or details about the position/degree
   skills?: string[]; // Optional: Array of skills related to the position/degree
-}
 }
 
 export type EducationOrExperience = ICommonFields;
