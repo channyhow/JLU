@@ -1,5 +1,5 @@
 // global.d.ts
 
-interface Window {
-  dataLayer: any[];
-}
+// interface Window {
+//   dataLayer: any[];
+// }
