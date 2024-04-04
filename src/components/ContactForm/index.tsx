@@ -8,7 +8,7 @@ import {
   DialogContentText,
   DialogActions,
 } from '@mui/material';
-import emailjs from 'emailjs-com';
+import emailjs from '@emailjs/browser';
 import './styles.scss';
 
 function ContactForm() {
